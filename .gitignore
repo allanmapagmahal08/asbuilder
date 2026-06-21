@@ -29,3 +29,5 @@ brand_assets/brand-guidelines.png
 # OS cruft
 .DS_Store
 Thumbs.db
+
+.vercel
