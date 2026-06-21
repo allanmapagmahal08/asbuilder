@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | Allan Simbulan Builder</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <link rel="icon" type="image/png" href="brand_assets/asb-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { ink:'#0A0A0A', volt:'#FDFF00', gold:'#FFD700' },
+      fontFamily: { display:['Poppins','system-ui','sans-serif'], body:['"Open Sans"','system-ui','sans-serif'] }
+    } } };
+  </script>
+  <style>
+    html,body{background:#0A0A0A}
+    body{font-family:'Open Sans',system-ui,sans-serif;color:#B5B5B0;-webkit-font-smoothing:antialiased}
+    h1,h2,.font-display{font-family:'Poppins',system-ui,sans-serif}
+    .grid-bg{position:absolute;inset:0;pointer-events:none;
+      background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+      background-size:46px 46px;-webkit-mask-image:radial-gradient(60% 60% at 50% 40%,#000,transparent 75%);mask-image:radial-gradient(60% 60% at 50% 40%,#000,transparent 75%)}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;border-radius:9999px;transition:transform .18s cubic-bezier(.16,1,.3,1),box-shadow .25s ease,background-color .2s ease}
+    .btn-primary{background:#FDFF00;color:#0A0A0A;box-shadow:0 16px 34px -16px rgba(253,255,0,.7)}
+    .btn-primary:hover{background:#FFD700;transform:translateY(-2px)}
+    .btn-ghost{border:1.5px solid rgba(255,255,255,.14);color:#F4F4F0}
+    .btn-ghost:hover{border-color:rgba(253,255,0,.55);background:rgba(253,255,0,.06);transform:translateY(-2px)}
+    :where(a,button):focus-visible{outline:3px solid #FDFF00;outline-offset:3px;border-radius:10px}
+  </style>
+</head>
+<body class="relative grid min-h-[100dvh] place-items-center overflow-hidden px-6">
+  <div class="grid-bg"></div>
+  <div class="pointer-events-none absolute inset-0" style="background:radial-gradient(40rem 26rem at 50% 30%, rgba(253,255,0,.12), transparent 62%)"></div>
+  <main class="relative z-10 mx-auto max-w-lg text-center">
+    <img src="brand_assets/asb-logo.png" alt="Allan Simbulan Builder" class="mx-auto h-12 w-auto rounded-xl bg-white px-2 py-1" />
+    <p class="mt-8 font-display text-[7rem] font-extrabold leading-none tracking-[-0.04em] text-white sm:text-[9rem]">4<span class="text-volt">0</span>4</p>
+    <h1 class="mt-2 font-display text-2xl font-extrabold tracking-tight text-white sm:text-3xl">This page took a wrong turn</h1>
+    <p class="mx-auto mt-4 max-w-md leading-relaxed text-white/65">The page you're looking for doesn't exist or may have moved. Let's get you back to building automated systems.</p>
+    <div class="mt-9 flex flex-wrap items-center justify-center gap-3">
+      <a href="/" class="btn btn-primary px-7 py-3.5 text-base">Back to Home <i class="ph-bold ph-arrow-up-right text-lg"></i></a>
+      <a href="https://wa.me/639563221636" target="_blank" rel="noopener noreferrer" class="btn btn-ghost px-7 py-3.5 text-base">Chat on WhatsApp</a>
+    </div>
+    <p class="mt-8 text-sm text-white/40">Allan Simbulan Builder &middot; AI Automation &amp; GoHighLevel Specialist</p>
+  </main>
+</body>
+</html>

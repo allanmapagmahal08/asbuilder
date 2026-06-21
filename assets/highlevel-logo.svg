@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-label="HighLevel">
+  <!-- bright arrows: yellow (left, tall), blue (middle, short), green (right, tall) -->
+  <polygon points="114,386 114,178 74,178 140,94 206,178 166,178 166,386" fill="#FDC500"/>
+  <polygon points="314,386 314,178 274,178 340,94 406,178 366,178 366,386" fill="#45C42E"/>
+  <polygon points="214,386 214,282 174,282 240,198 306,282 266,282 266,386" fill="#2D9CF5"/>
+  <!-- overlap/fold shadow triangles for depth -->
+  <polygon points="140,94 206,178 166,178" fill="#C49600"/>
+  <polygon points="340,94 274,178 314,178" fill="#2C8C1C"/>
+  <polygon points="240,198 306,282 266,282" fill="#1B6CB0"/>
+</svg>

@@ -1,0 +1,27 @@
+# mirror of .gitignore so the CLI deploy ships only the public static site
+node_modules/
+package.json
+package-lock.json
+serve.mjs
+screenshot.mjs
+detail-shot.mjs
+el-shot.mjs
+
+CLAUDE.md
+DESIGN.md
+PRODUCT.md
+skills-lock.json
+.claude/
+.agents/
+archive/
+temporary screenshots/
+
+index.html
+portfolio.html
+
+assets/_ghl3_tmp
+assets/README.txt
+brand_assets/brand-guidelines.png
+
+.DS_Store
+Thumbs.db

@@ -1,0 +1,1861 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    /* apply saved/system theme before paint to avoid a flash */
+    (function () { try { if (localStorage.getItem('asb-theme') === 'light') { document.documentElement.setAttribute('data-theme', 'light'); } } catch (e) {} })();
+  </script>
+  <title>Allan Simbulan Builder | AI Automation &amp; GoHighLevel Specialist</title>
+  <meta name="description" content="Allan Simbulan builds intelligent automations and AI-powered workflows with n8n, Make, Zapier, and GoHighLevel, eliminating repetitive tasks so you can focus on what actually matters." />
+
+  <meta property="og:title" content="Allan Simbulan Builder | AI Automation &amp; GoHighLevel Specialist" />
+  <meta property="og:description" content="Automate workflows. Build systems. Save hours. AI + CRM automation for startups and growing businesses." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://asbuilder.ph/" />
+  <meta property="og:site_name" content="Allan Simbulan Builder" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://asbuilder.ph/brand_assets/asb-logo.png" />
+  <meta property="og:image:alt" content="Allan Simbulan Builder, AI Automation &amp; GoHighLevel Specialist" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Allan Simbulan Builder | AI Automation &amp; GoHighLevel Specialist" />
+  <meta name="twitter:description" content="Automate workflows. Build systems. Save hours. AI + CRM automation for startups and growing businesses." />
+  <meta name="twitter:image" content="https://asbuilder.ph/brand_assets/asb-logo.png" />
+  <meta name="twitter:image:alt" content="Allan Simbulan Builder, AI Automation &amp; GoHighLevel Specialist" />
+  <meta name="theme-color" id="theme-color-meta" content="#0A0A0A" />
+  <link rel="icon" type="image/png" href="brand_assets/asb-logo.png" />
+  <link rel="canonical" href="https://asbuilder.ph/" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Allan Simbulan",
+    "jobTitle": "AI Automation & GoHighLevel Specialist",
+    "url": "https://asbuilder.ph/",
+    "image": "https://asbuilder.ph/assets/allan.png",
+    "email": "allanmapagmahal08@gmail.com",
+    "telephone": "+639563221636",
+    "address": { "@type": "PostalAddress", "addressLocality": "Manila", "addressCountry": "PH" },
+    "sameAs": [
+      "https://www.facebook.com/allansimbulanbuilder01",
+      "https://www.instagram.com/allansimbulanbuilder01/",
+      "https://www.tiktok.com/@allansimbulanbuilder",
+      "https://www.linkedin.com/in/allan-simbulan/"
+    ],
+    "knowsAbout": ["AI Automation","GoHighLevel","n8n","Make.com","Zapier","CRM Automation","Workflow Automation","API & Webhook Integration","Prompt Engineering"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+  <link rel="preconnect" href="https://unpkg.com" />
+  <link rel="preconnect" href="https://cdn.simpleicons.org" />
+  <link rel="preconnect" href="https://sites.leadconnectorhq.com" />
+  <link rel="preconnect" href="https://api.leadconnectorhq.com" />
+  <link rel="preconnect" href="https://link.msgsndr.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1" defer></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0A0A0A', coal: '#121212', char: '#171717', paper: '#FFFFFF',
+            mist: '#F6F5F0', line: '#ECEAE2', ash: '#5C5C57',
+            volt: '#FDFF00', gold: '#FFD700',
+          },
+          fontFamily: {
+            display: ['Poppins', 'system-ui', 'sans-serif'],
+            body: ['"Open Sans"', 'system-ui', 'sans-serif'],
+          },
+          maxWidth: { shell: '1200px' },
+        },
+      },
+    };
+  </script>
+
+  <script>
+    // Offline fallback art for certificate images not yet on disk (no external CDN dependency).
+    window.certFallback = function (img) {
+      img.onerror = null;
+      img.src = 'data:image/svg+xml,' + encodeURIComponent(
+        '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="566"><rect width="800" height="566" fill="#121212"/><circle cx="400" cy="236" r="46" fill="#FDFF00"/><path d="M381 236l13 13 27-29" fill="none" stroke="#121212" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><text x="400" y="350" font-family="Poppins, Arial, sans-serif" font-size="27" font-weight="700" text-anchor="middle" fill="#ffffff">Certificate</text><text x="400" y="388" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" fill="#8d8d86">preview coming soon</text></svg>'
+      );
+    };
+    // Offline fallback art for the About photo until assets/allan.jpg is added.
+    window.photoFallback = function (img) {
+      img.onerror = null;
+      img.src = 'data:image/svg+xml,' + encodeURIComponent(
+        '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000"><rect width="800" height="1000" fill="#161616"/><g fill="#FDE047"><circle cx="400" cy="408" r="118"/><path d="M205 772c0-108 87-196 195-196s195 88 195 196v36H205z"/></g><text x="400" y="908" font-family="Poppins, Arial, sans-serif" font-size="40" font-weight="700" text-anchor="middle" fill="#ffffff">Allan Simbulan</text><text x="400" y="953" font-family="Arial, sans-serif" font-size="25" text-anchor="middle" fill="#8d8d86">photo coming soon</text></svg>'
+      );
+    };
+  </script>
+
+  <style>
+    :root { color-scheme: dark; }
+    html, body { background: #0A0A0A; }
+    /* keep anchored section headings clear of the fixed navbar when jumping via nav links */
+    html { scroll-padding-top: 6rem; }
+    body { font-family: 'Open Sans', system-ui, sans-serif; color: #B5B5B0; -webkit-font-smoothing: antialiased; }
+    h1,h2,h3,h4,.font-display { font-family: 'Poppins', system-ui, sans-serif; }
+    h1,h2,h3,h4 { text-wrap: balance; color: #F4F4F0; }
+    p, blockquote, li { text-wrap: pretty; }
+    .shell { max-width: 1200px; margin-inline: auto; padding-inline: 1.5rem; }
+
+    /* grain/noise overlay for tactile depth on dark surfaces */
+    .grain { position: relative; }
+    .grain::before { content:''; position:absolute; inset:0; pointer-events:none; z-index:0; opacity:.05; mix-blend-mode:overlay;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+    /* faint technical grid for the hero */
+    .gridbg { position:absolute; inset:0; pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+      background-size: 46px 46px;
+      -webkit-mask-image: radial-gradient(70% 55% at 50% 0%, #000 35%, transparent 100%);
+              mask-image: radial-gradient(70% 55% at 50% 0%, #000 35%, transparent 100%); }
+
+    .kicker { font-family:'Poppins',sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #9A978C; }
+
+    .navlink { color:#9C9C95; }
+    .navlink:hover { color:#F4F4F0; }
+    .navlink.is-active { color:#F4F4F0; }
+    .navlink.is-active::after { content:''; display:block; height:2px; margin-top:5px; border-radius:2px; background:#FDFF00; box-shadow:0 0 10px rgba(253,255,0,.6); }
+
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; font-weight:700; border-radius:9999px; transition: transform .18s cubic-bezier(.16,1,.3,1), box-shadow .25s ease, background-color .2s ease, color .2s ease, border-color .2s ease; will-change: transform; }
+    .btn:active { transform: translateY(1px) scale(.985); }
+    .btn-primary { background:#FDFF00; color:#0A0A0A; box-shadow: 0 16px 34px -16px rgba(253,255,0,.7); }
+    .btn-primary:hover { background:#FFD700; transform: translateY(-2px); box-shadow: 0 24px 48px -16px rgba(255,215,0,.8); }
+    .btn-ghost { background:rgba(255,255,255,.02); color:#F4F4F0; border:1.5px solid rgba(255,255,255,.14); }
+    .btn-ghost:hover { border-color:rgba(253,255,0,.55); background:rgba(253,255,0,.06); transform: translateY(-2px); }
+
+    /* button-in-button: trailing icon nested in its own circle, flush to the button's right padding,
+       with magnetic kinetic drift on hover (the circle pushes diagonally and scales as the button presses) */
+    .btn-ic { display:grid; place-items:center; width:1.6rem; height:1.6rem; margin:-.25rem -.45rem -.25rem .15rem; border-radius:9999px; font-size:.82rem; flex:0 0 auto;
+      transition: transform .5s cubic-bezier(.32,.72,0,1), background-color .3s ease, color .2s ease; }
+    .btn-primary .btn-ic { background:rgba(10,10,10,.16); color:#0A0A0A; }
+    .btn-ghost .btn-ic { background:rgba(253,255,0,.14); color:#FDFF00; }
+    .btn:hover .btn-ic, .btn-ghost:hover .btn-ic { transform: translate(2px,-2px) scale(1.08); }
+    .btn:active .btn-ic, .btn-ghost:active .btn-ic { transform: translate(1px,-1px) scale(1); }
+    html[data-theme="light"] .btn-ghost .btn-ic { background:rgba(138,101,0,.14); color:#8A6500; }
+
+    :where(a,button,input,textarea,summary):focus-visible { outline:3px solid #FDFF00; outline-offset:3px; border-radius:10px; }
+
+    /* dark panel/card */
+    /* machined double-bezel: a softly-lit core sitting in a hairline tray (concentric inset rings + layered ambient depth) */
+    .panel { background: linear-gradient(180deg,#181818,#0f0f0f); border:1px solid rgba(255,255,255,.08); border-radius:1.5rem;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.07), inset 0 0 0 1px rgba(255,255,255,.022), 0 2px 5px -2px rgba(0,0,0,.5), 0 28px 56px -32px rgba(0,0,0,.85);
+      transition: transform .45s cubic-bezier(.16,1,.3,1), box-shadow .45s ease, border-color .45s ease; }
+    .panel-hover:hover { transform: translateY(-6px); border-color: rgba(253,255,0,.4);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.1), inset 0 0 0 1px rgba(253,255,0,.05), 0 3px 8px -3px rgba(0,0,0,.55), 0 40px 72px -30px rgba(0,0,0,.9), 0 0 0 1px rgba(253,255,0,.07); }
+    /* cursor-following gold spotlight on hover cards (position set by JS via --mx/--my) */
+    .panel-hover { position: relative; isolation: isolate; }
+    .panel-hover::after { content:''; position:absolute; inset:0; z-index:2; border-radius:inherit; pointer-events:none;
+      background: radial-gradient(14rem 14rem at var(--mx,50%) var(--my,50%), rgba(253,255,0,.10), transparent 55%);
+      opacity:0; transition:opacity .35s ease; }
+    .panel-hover:hover::after { opacity:1; }
+    @media (hover:none) { .panel-hover::after { content:none; } }
+
+    .ico { display:grid; place-items:center; width:3rem; height:3rem; border-radius:.85rem; background:linear-gradient(150deg,#222,#121212); color:#FDFF00; border:1px solid rgba(253,255,0,.18);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 10px 22px -12px rgba(0,0,0,.8); }
+
+    .stepnum { font-family:'Poppins',sans-serif; font-weight:800; font-size:34px; line-height:1; color:rgba(255,255,255,.10); -webkit-text-stroke:1px rgba(253,255,0,.35); }
+
+    .pill { display:inline-flex; align-items:center; gap:.5rem; padding:.55rem .95rem; border-radius:9999px; font-size:13px; font-weight:600; color:#D8D8D2;
+      background:rgba(255,255,255,.025); border:1px solid rgba(255,255,255,.09); transition: border-color .2s ease, transform .2s ease, background-color .2s ease; }
+    .pill:hover { border-color:rgba(253,255,0,.45); background:rgba(253,255,0,.05); transform: translateY(-2px); }
+    .pill img { height:16px; width:16px; }
+    .pill img.wide { width:auto !important; height:18px; background:#fff; border-radius:4px; padding:1px 3px; }
+
+    /* moving logo marquee (scrolls right -> left, pauses on hover) */
+    .marquee-wrap { overflow:hidden; -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent); mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent); }
+    .marquee { display:flex; width:max-content; animation: marquee-scroll 38s linear infinite; }
+    .marquee .pill { margin-right:.85rem; flex:0 0 auto; }
+    .marquee-wrap:hover .marquee { animation-play-state: paused; }
+    @keyframes marquee-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* testimonials: auto-scrolling review carousel (pauses on hover/focus) */
+    .t-wrap { overflow:hidden; -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent); mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent); }
+    .t-track { display:flex; width:max-content; animation: t-scroll 44s linear infinite; }
+    .t-track .tcard { flex:0 0 auto; width:min(86vw,30rem); margin-right:1.25rem; }
+    .t-wrap:hover .t-track, .t-wrap:focus-within .t-track { animation-play-state: paused; }
+    @keyframes t-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .stars { display:inline-flex; gap:.12rem; color:#FFC83D; font-size:1.05rem; }
+
+    .seg { padding:.5rem 1.1rem; border-radius:9999px; font-size:13px; font-weight:700; color:#9C9C95; border:1px solid rgba(255,255,255,.1); background:rgba(255,255,255,.02); transition: color .2s ease, border-color .2s ease, background-color .2s ease, box-shadow .2s ease; }
+    .seg:hover { color:#F4F4F0; border-color:rgba(255,255,255,.22); }
+    .seg.active { color:#0A0A0A; background:#FDFF00; border-color:#FDFF00; box-shadow:0 10px 24px -12px rgba(253,255,0,.6); }
+
+    .tag { display:inline-block; font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:.2rem .55rem; border-radius:.4rem; color:#C9C9C2; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); }
+
+    /* sample-works: a lone filtered card shouldn't sit half-width with an empty column */
+    @media (min-width:768px){
+      #project-grid.one { grid-template-columns:minmax(0,23.5rem); justify-content:center; }
+      #project-grid.two { grid-template-columns:repeat(2,minmax(0,23.5rem)); justify-content:center; }
+    }
+    /* sample-works: detail modal typography + key-feature list */
+    .feat-list { display:grid; gap:.55rem; }
+    @media (min-width:640px){ .feat-list.feat-2col { grid-template-columns:1fr 1fr; gap:.55rem 1.5rem; } }
+    .feat-list li { position:relative; padding-left:1.55rem; font-size:.875rem; line-height:1.55; color:rgba(255,255,255,.72); list-style:none; }
+    .feat-list li::before { content:'\2713'; position:absolute; left:0; top:-1px; font-weight:900; color:#FDFF00; }
+    #sample-modal-body .smp-p { font-size:.9rem; line-height:1.7; color:rgba(255,255,255,.7); }
+    #sample-modal-body .smp-p + .smp-p { margin-top:.85rem; }
+    #sample-modal-body .smp-h { font-family:'Poppins',sans-serif; font-weight:700; font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; color:#FDFF00; margin:1.5rem 0 .8rem; }
+    #sample-modal-body .smp-h:first-child { margin-top:0; }
+    #sample-modal-body .case-img { display:block; width:100%; border-radius:.9rem; border:1px solid rgba(255,255,255,.1); background:#f6f6f8; }
+    #sample-modal-body .case-cap { margin-top:.55rem; font-size:.75rem; line-height:1.5; color:rgba(255,255,255,.5); }
+    /* case-study: numbered scenario breakdown */
+    #sample-modal-body .step-list { display:grid; gap:.7rem; counter-reset:step; }
+    #sample-modal-body .step-list li { position:relative; padding-left:2.15rem; font-size:.875rem; line-height:1.55; color:rgba(255,255,255,.72); list-style:none; counter-increment:step; }
+    #sample-modal-body .step-list li::before { content:counter(step); position:absolute; left:0; top:-.1rem; display:grid; place-items:center; width:1.55rem; height:1.55rem; border-radius:9999px;
+      background:rgba(253,255,0,.12); color:#FDFF00; font-family:'Poppins',sans-serif; font-size:.72rem; font-weight:800; border:1px solid rgba(253,255,0,.32); }
+    #sample-modal-body .step-list li b { color:#F4F4F0; font-weight:700; }
+
+    /* ROI calculator */
+    .roi-stars { position:absolute; inset:0; pointer-events:none; opacity:.7;
+      background-image:
+        radial-gradient(1px 1px at 12% 22%, rgba(255,255,255,.5), transparent),
+        radial-gradient(1px 1px at 28% 64%, rgba(255,255,255,.35), transparent),
+        radial-gradient(1.5px 1.5px at 44% 18%, rgba(255,255,255,.45), transparent),
+        radial-gradient(1px 1px at 62% 48%, rgba(255,255,255,.3), transparent),
+        radial-gradient(1px 1px at 76% 28%, rgba(255,255,255,.4), transparent),
+        radial-gradient(1.5px 1.5px at 88% 70%, rgba(255,255,255,.35), transparent),
+        radial-gradient(1px 1px at 52% 82%, rgba(255,255,255,.3), transparent),
+        radial-gradient(1px 1px at 18% 88%, rgba(255,255,255,.3), transparent); }
+    .roi-range { -webkit-appearance:none; appearance:none; width:100%; height:8px; border-radius:9999px; outline:none; cursor:pointer;
+      background:linear-gradient(90deg, #FDFF00 var(--p,50%), rgba(255,255,255,.12) var(--p,50%)); }
+    .roi-range::-webkit-slider-thumb { -webkit-appearance:none; appearance:none; width:22px; height:22px; border-radius:50%; background:#fff; border:3px solid #FDFF00; box-shadow:0 4px 14px rgba(253,255,0,.5); transition:transform .15s ease; }
+    .roi-range::-webkit-slider-thumb:hover { transform:scale(1.1); }
+    .roi-range::-moz-range-thumb { width:20px; height:20px; border:3px solid #FDFF00; border-radius:50%; background:#fff; box-shadow:0 4px 14px rgba(253,255,0,.5); }
+    .roi-range::-moz-range-track { height:8px; border-radius:9999px; background:rgba(255,255,255,.12); }
+    .roi-range::-moz-range-progress { height:8px; border-radius:9999px; background:#FDFF00; }
+    .roi-range:focus-visible { outline:2px solid rgba(253,255,0,.7); outline-offset:4px; }
+    .roi-select { width:100%; -webkit-appearance:none; appearance:none; cursor:pointer; font-weight:600; color:#F4F4F0;
+      background:linear-gradient(180deg,#161616,#101010); border:1px solid rgba(255,255,255,.1); border-radius:.85rem; padding:.85rem 2.75rem .85rem 1rem; }
+    .roi-select:focus-visible { outline:2px solid rgba(253,255,0,.7); outline-offset:2px; }
+    .roi-select option { background:#171717; color:#F4F4F0; }
+    .roi-result { background:linear-gradient(135deg,#FFE74D,#FFD700); color:#0A0A0A; border:1px solid rgba(255,215,0,.5); box-shadow:0 24px 50px -22px rgba(255,215,0,.55); }
+    .roi-disclaimer { border:1px solid rgba(255,215,0,.28); background:rgba(255,215,0,.05); border-radius:1rem; }
+    /* tabular figures so the live-updating numbers don't shift width as sliders move */
+    #roi-hours-out, #roi-cost-out, #roi-auto-pct, #roi-saved, #roi-weekly, #roi-monthly, #roi-annual { font-variant-numeric: tabular-nums; }
+
+    /* AI-tech animated background: drifting node/neural network (canvas) */
+    #ai-bg { position:fixed; inset:0; z-index:-1; pointer-events:none; opacity:.85; }
+    html[data-theme="light"] #ai-bg { opacity:.5; }
+    /* soft glow that trails the mouse (above content so it's always visible) */
+    #cursor-glow { position:fixed; top:0; left:0; z-index:40; pointer-events:none; width:360px; height:360px; margin:-180px 0 0 -180px;
+      border-radius:50%; opacity:0; transition:opacity .45s ease; will-change:transform;
+      background:radial-gradient(circle, rgba(253,255,0,.16), rgba(255,215,0,.06) 42%, transparent 68%); }
+    #cursor-glow.on { opacity:1; }
+    html[data-theme="light"] #cursor-glow { background:radial-gradient(circle, rgba(138,101,0,.14), rgba(138,101,0,.05) 42%, transparent 68%); }
+    @media (hover:none) { #cursor-glow { display:none !important; } }
+    /* custom dot + trailing ring cursor (copied style from a reference site, in volt/gold) */
+    html.cc, html.cc * { cursor: none !important; }
+    #cc-dot, #cc-ring { position:fixed; top:0; left:0; z-index:9999; pointer-events:none; border-radius:9999px; opacity:0; will-change:transform; }
+    #cc-dot { width:7px; height:7px; margin:-3.5px 0 0 -3.5px; background:#FDFF00; box-shadow:0 0 8px rgba(253,255,0,.85); transition:opacity .3s ease; }
+    #cc-ring { width:34px; height:34px; margin:-17px 0 0 -17px; border:1.5px solid rgba(253,255,0,.6); mix-blend-mode:screen;
+      transition:opacity .3s ease, width .18s ease, height .18s ease, margin .18s ease, border-color .18s ease, background-color .18s ease; }
+    #cc-ring.cc-hover { width:56px; height:56px; margin:-28px 0 0 -28px; background:rgba(253,255,0,.08); border-color:rgba(253,255,0,.95); }
+    html[data-theme="light"] #cc-dot { background:#8A6500; box-shadow:0 0 8px rgba(138,101,0,.6); }
+    html[data-theme="light"] #cc-ring { border-color:rgba(138,101,0,.6); mix-blend-mode:multiply; }
+    html[data-theme="light"] #cc-ring.cc-hover { background:rgba(138,101,0,.1); border-color:rgba(138,101,0,.95); }
+    @media (hover: none) { #cc-dot, #cc-ring { display:none !important; } html.cc, html.cc * { cursor:auto !important; } }
+
+    .badge-ring { width:4.5rem; height:4.5rem; border-radius:9999px; display:grid; place-items:center; color:#0A0A0A;
+      background:radial-gradient(circle at 35% 30%, #FFF38A, #FDFF00 45%, #E6C200 100%);
+      box-shadow: 0 0 0 6px rgba(253,255,0,.10), 0 14px 30px -14px rgba(253,255,0,.55); }
+
+    /* cinematic entry: heavy fade + lift + de-blur as elements enter the viewport */
+    .reveal { opacity:0; transform: translateY(26px); filter: blur(8px);
+      transition: opacity .85s cubic-bezier(.16,1,.3,1), transform .85s cubic-bezier(.16,1,.3,1), filter .85s cubic-bezier(.16,1,.3,1); transition-delay: var(--d,0s); }
+    .reveal.is-visible { opacity:1; transform:none; filter:blur(0); }
+
+    /* scroll progress hairline */
+    #progress { position:fixed; top:0; left:0; height:3px; width:0; z-index:60; pointer-events:none;
+      background:linear-gradient(90deg,#FDFF00,#FFD700); box-shadow:0 0 10px rgba(253,255,0,.55); transition:width .1s linear; }
+
+    /* hero: headline icon chips */
+    .hchip { display:grid; place-items:center; width:2.6rem; height:2.6rem; flex:0 0 auto; border-radius:.8rem;
+      background:linear-gradient(150deg, rgba(253,255,0,.16), rgba(255,215,0,.04)); border:1px solid rgba(253,255,0,.35);
+      color:#FDE047; font-size:1.3rem; box-shadow:inset 0 1px 0 rgba(255,255,255,.08), 0 0 18px -6px rgba(253,255,0,.55); }
+
+    /* hero: AI robot HUD */
+    .hud { position:relative; width:100%; max-width:430px; aspect-ratio:1/1; display:grid; place-items:center; }
+    .hud .layer { grid-area:1/1; border-radius:50%; }
+    .hud-glow { width:62%; height:62%; background:radial-gradient(circle, rgba(253,255,0,.30), rgba(255,215,0,.05) 55%, transparent 72%); filter:blur(8px); }
+    .hud .ring1 { width:100%; height:100%; border:1px dashed rgba(253,255,0,.30); animation:hud-spin 26s linear infinite; }
+    .hud .ring2 { width:82%; height:82%; border:1px solid rgba(255,215,0,.16); box-shadow:inset 0 0 36px rgba(253,255,0,.06); }
+    .hud .ring3 { width:64%; height:64%; border:2px dotted rgba(253,255,0,.26); animation:hud-spin-rev 20s linear infinite; }
+    .hud .hud-ticks { width:100%; height:100%; animation:hud-spin 44s linear infinite; }
+    .hud .radar { width:82%; height:82%;
+      background:conic-gradient(from 0deg, rgba(253,255,0,.32), rgba(253,255,0,.04) 55deg, transparent 130deg, transparent 360deg);
+      -webkit-mask:radial-gradient(circle, transparent 27%, #000 28%); mask:radial-gradient(circle, transparent 27%, #000 28%);
+      animation:hud-spin 5.5s linear infinite; }
+    .hud .scan { width:48%; height:48%; border:1.5px solid rgba(253,255,0,.5); animation:hud-scan 3.4s ease-out infinite; }
+    .hud .scan-b { animation-delay:1.7s; }
+    .hud .robot { width:44%; height:44%; border-radius:0; filter:drop-shadow(0 0 12px rgba(253,255,0,.5)); animation:hud-float 6s ease-in-out infinite; }
+    .hud .robot .eye { animation:eye-pulse 2.6s ease-in-out infinite; }
+    .hud .particle { position:absolute; width:6px; height:6px; border-radius:50%; background:#FDFF00; box-shadow:0 0 9px 2px rgba(253,255,0,.7); }
+    .hud .p1 { top:13%; right:15%; animation:hud-twinkle 2.6s ease-in-out infinite; }
+    .hud .p2 { bottom:19%; left:9%;  animation:hud-twinkle 3.2s ease-in-out infinite .5s; }
+    .hud .p3 { bottom:13%; right:21%; animation:hud-twinkle 2.2s ease-in-out infinite .9s; }
+    .hud .p4 { top:17%; left:17%;  animation:hud-twinkle 3s ease-in-out infinite 1.3s; }
+    @keyframes hud-spin { to { transform:rotate(360deg); } }
+    @keyframes hud-spin-rev { to { transform:rotate(-360deg); } }
+    @keyframes hud-scan { 0%{transform:scale(.45);opacity:.85} 75%{opacity:0} 100%{transform:scale(1.3);opacity:0} }
+    @keyframes hud-twinkle { 0%,100%{opacity:.2;transform:scale(.7)} 50%{opacity:1;transform:scale(1.15)} }
+    @keyframes hud-float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+    @keyframes eye-pulse { 0%,100%{opacity:1} 50%{opacity:.5} }
+
+    /* clickable photo role badges — hover glow + springy click pop */
+    .pbadge { cursor:pointer; transition: transform .2s cubic-bezier(.16,1,.3,1), box-shadow .25s ease, border-color .2s ease; }
+    .pbadge:hover { transform: translateY(-2px) scale(1.05); border-color: rgba(253,255,0,.5); box-shadow: 0 0 22px -2px rgba(253,255,0,.6), 0 16px 34px -14px rgba(0,0,0,.85); }
+    .pbadge:active { transform: scale(.94); }
+    @keyframes badge-pop {
+      0%   { transform: scale(1) translateY(0); }
+      22%  { transform: scale(1.16) translateY(-5px); box-shadow: 0 0 30px 6px rgba(253,255,0,.85), 0 16px 34px -14px rgba(0,0,0,.85); }
+      55%  { transform: scale(.95) translateY(0); }
+      100% { transform: scale(1) translateY(0); }
+    }
+    .pbadge.pop { animation: badge-pop .6s cubic-bezier(.16,1,.3,1); }
+
+    @keyframes wa-pulse { 0%{box-shadow:0 0 0 0 rgba(37,211,102,.5);} 70%{box-shadow:0 0 0 16px rgba(37,211,102,0);} 100%{box-shadow:0 0 0 0 rgba(37,211,102,0);} }
+    .wa-pulse { animation: wa-pulse 2.4s ease-out infinite; }
+    @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:.25;} }
+    .live { animation: blink 1.8s ease-in-out infinite; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity:1 !important; transform:none !important; filter:none !important; transition:none !important; }
+      .wa-pulse, .live { animation:none !important; }
+      .scroll-smooth { scroll-behavior:auto !important; }
+      .btn, .panel, .panel-hover:hover, .pill:hover, .btn:hover .btn-ic, .btn:active .btn-ic, .btn-ghost:hover .btn-ic, .btn-ghost:active .btn-ic { transform:none !important; }
+      .roi-range::-webkit-slider-thumb { transition:none !important; }
+      .roi-range::-webkit-slider-thumb:hover { transform:none !important; }
+      #ai-bg, #cursor-glow { display:none; }
+      #cc-ring { transition:none !important; }
+      .panel-hover::after { content:none; }
+      .marquee { animation:none !important; flex-wrap:wrap; gap:.6rem; }
+      .marquee .pill { margin-right:0; }
+      .marquee .dup { display:none; }
+      .marquee-wrap { overflow:visible; -webkit-mask-image:none; mask-image:none; }
+      .t-track { animation:none !important; flex-wrap:wrap; justify-content:center; gap:1.25rem; width:auto; }
+      .t-track .tcard { margin-right:0; }
+      .t-track .t-dup { display:none; }
+      .t-wrap { overflow:visible; -webkit-mask-image:none; mask-image:none; }
+      .hud .ring1, .hud .ring3, .hud .hud-ticks, .hud .radar, .hud .robot, .hud .robot .eye, .hud .particle { animation:none !important; }
+      .hud .scan { display:none; }
+      .pbadge.pop { animation:none !important; }
+      .pbadge:hover, .pbadge:active { transform:none !important; }
+      * { transition-duration:.01ms !important; }
+    }
+
+    /* ============================= LIGHT MODE ============================= */
+    html[data-theme="light"] { color-scheme: light; }
+    html[data-theme="light"], html[data-theme="light"] body { background:#F4F2EC; }
+    html[data-theme="light"] body { color:#46443E; }
+    html[data-theme="light"] h1, html[data-theme="light"] h2, html[data-theme="light"] h3, html[data-theme="light"] h4 { color:#14130F; }
+    /* smooth the flip */
+    html[data-theme] body, html[data-theme] .panel, html[data-theme] .pill, html[data-theme] header nav { transition: background-color .35s ease, color .35s ease, border-color .35s ease; }
+
+    /* base body text + accent (yellow text/icons -> readable dark gold; filled yellow buttons stay bright) */
+    html[data-theme="light"] .text-\[\#B5B5B0\] { color:#46443E !important; }
+    html[data-theme="light"] .text-volt { color:#8a6500 !important; }
+
+    /* white text -> ink, per opacity tier */
+    html[data-theme="light"] .text-white { color:#14130F !important; }
+    html[data-theme="light"] .text-white\/80 { color:rgba(20,19,15,.85) !important; }
+    html[data-theme="light"] .text-white\/70 { color:rgba(20,19,15,.72) !important; }
+    html[data-theme="light"] .text-white\/65 { color:rgba(20,19,15,.66) !important; }
+    html[data-theme="light"] .text-white\/60 { color:rgba(20,19,15,.62) !important; }
+    html[data-theme="light"] .text-white\/55 { color:rgba(20,19,15,.6) !important; }
+    html[data-theme="light"] .text-white\/50 { color:rgba(20,19,15,.55) !important; }
+    html[data-theme="light"] .text-white\/40 { color:rgba(20,19,15,.5) !important; }
+    html[data-theme="light"] .text-white\/35 { color:rgba(20,19,15,.45) !important; }
+    html[data-theme="light"] .text-white\/30 { color:rgba(20,19,15,.42) !important; }
+    html[data-theme="light"] .text-white\/75 { color:rgba(20,19,15,.78) !important; }
+
+    /* dark surfaces -> light */
+    html[data-theme="light"] .bg-ink { background-color:#F4F2EC !important; }
+    html[data-theme="light"] .bg-ink\/70 { background-color:rgba(255,255,255,.82) !important; }
+    html[data-theme="light"] .bg-coal { background-color:#ECEAE2 !important; }
+    html[data-theme="light"] .bg-char { background-color:#FFFFFF !important; }
+    html[data-theme="light"] .bg-white\/5 { background-color:rgba(20,19,15,.05) !important; }
+    html[data-theme="light"] .bg-white\/\[\.03\] { background-color:rgba(20,19,15,.04) !important; }
+    html[data-theme="light"] .bg-white\/\[\.015\] { background-color:rgba(20,19,15,.025) !important; }
+
+    /* borders */
+    html[data-theme="light"] .border-white\/10 { border-color:rgba(20,19,15,.12) !important; }
+    html[data-theme="light"] .border-white\/12 { border-color:rgba(20,19,15,.12) !important; }
+    html[data-theme="light"] .border-white\/\[\.06\] { border-color:rgba(20,19,15,.09) !important; }
+    html[data-theme="light"] .border-white\/\[\.07\] { border-color:rgba(20,19,15,.1) !important; }
+
+    /* custom components */
+    html[data-theme="light"] .panel { background:#FFFFFF; border-color:#E7E4DA; box-shadow: inset 0 1px 0 rgba(255,255,255,.9), inset 0 0 0 1px rgba(28,22,4,.012), 0 1px 2px rgba(28,22,4,.05), 0 20px 44px -24px rgba(28,22,4,.18); }
+    html[data-theme="light"] .panel-hover:hover { border-color:rgba(200,150,0,.5); box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 2px 6px rgba(28,22,4,.07), 0 34px 60px -26px rgba(28,22,4,.22); }
+    html[data-theme="light"] .pill { background:rgba(20,19,15,.03); border-color:rgba(20,19,15,.1); color:#46443E; }
+    html[data-theme="light"] .pill:hover { background:rgba(253,255,0,.16); border-color:rgba(200,150,0,.5); }
+    html[data-theme="light"] .navlink { color:#6E6B62; }
+    html[data-theme="light"] .navlink:hover, html[data-theme="light"] .navlink.is-active { color:#14130F; }
+    html[data-theme="light"] .btn-ghost { background:#fff; color:#14130F; border-color:#E0DDD2; }
+    html[data-theme="light"] .btn-ghost:hover { border-color:#14130F; background:#fff; }
+    html[data-theme="light"] .seg { color:#6E6B62; border-color:rgba(20,19,15,.12); background:rgba(20,19,15,.02); }
+    html[data-theme="light"] .seg:hover { color:#14130F; border-color:rgba(20,19,15,.25); }
+    html[data-theme="light"] .tag { color:#5C5A52; background:rgba(20,19,15,.05); border-color:rgba(20,19,15,.1); }
+    html[data-theme="light"] .stepnum { color:rgba(20,19,15,.12); -webkit-text-stroke-color:rgba(200,150,0,.5); }
+    html[data-theme="light"] .kicker { color:#6E6B62; }
+    html[data-theme="light"] .stars { color:#B8860B; }
+    html[data-theme="light"] .hchip { background:linear-gradient(150deg, rgba(200,150,0,.16), rgba(200,150,0,.04)); border-color:rgba(200,150,0,.4); color:#8a6500; }
+    html[data-theme="light"] .gridbg { background-image:linear-gradient(rgba(20,19,15,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(20,19,15,.05) 1px,transparent 1px); }
+
+    /* robot HUD sits on a dark disc so the gold mark still pops on a light page */
+    html[data-theme="light"] .hud { background:radial-gradient(circle at 50% 38%, #18180f 0%, #0c0c0a 72%, transparent 80%); border-radius:50%; }
+
+    /* keep the certificate modal caption legible on its (still-dark) backdrop */
+    html[data-theme="light"] #cert-modal-title { color:#ffffff !important; }
+    html[data-theme="light"] #cert-modal-meta { color:rgba(255,255,255,.72) !important; }
+
+    /* sample-works light theme */
+    html[data-theme="light"] .feat-list li { color:#46443E; }
+    html[data-theme="light"] .feat-list li::before { color:#8A6500; }
+    html[data-theme="light"] #sample-modal-panel { background:linear-gradient(180deg,#FFFFFF,#FBFAF5); border-color:#E7E4DA; }
+    html[data-theme="light"] #sample-modal-panel .text-volt { color:#8A6500; }
+    html[data-theme="light"] #sample-modal-title { color:#14130F; }
+    html[data-theme="light"] #sample-modal-body .smp-p { color:#46443E; }
+    html[data-theme="light"] #sample-modal-body .smp-h { color:#8A6500; }
+    html[data-theme="light"] #sample-modal-body .case-img { border-color:#E7E4DA; }
+    html[data-theme="light"] #sample-modal-body .case-cap { color:#6E6B62; }
+    html[data-theme="light"] #sample-modal-body .step-list li { color:#46443E; }
+    html[data-theme="light"] #sample-modal-body .step-list li::before { background:rgba(138,101,0,.12); color:#8A6500; border-color:rgba(138,101,0,.35); }
+    html[data-theme="light"] #sample-modal-body .step-list li b { color:#14130F; }
+    html[data-theme="light"] .roi-stars { opacity:0; }
+    html[data-theme="light"] .roi-range { background:linear-gradient(90deg,#8A6500 var(--p,50%), rgba(20,19,15,.12) var(--p,50%)); }
+    html[data-theme="light"] .roi-range::-webkit-slider-thumb { background:#fff; border-color:#8A6500; box-shadow:0 4px 12px rgba(138,101,0,.35); }
+    html[data-theme="light"] .roi-range::-moz-range-thumb { background:#fff; border-color:#8A6500; }
+    html[data-theme="light"] .roi-range::-moz-range-track { background:rgba(20,19,15,.12); }
+    html[data-theme="light"] .roi-range::-moz-range-progress { background:#8A6500; }
+    html[data-theme="light"] .roi-select { color:#14130F; background:#fff; border-color:#E0DDD2; }
+    html[data-theme="light"] .roi-select option { background:#fff; color:#14130F; }
+    html[data-theme="light"] .roi-disclaimer { border-color:rgba(138,101,0,.3); background:rgba(255,215,0,.1); }
+  </style>
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important;filter:none !important}</style></noscript>
+</head>
+
+<body class="bg-ink text-[#B5B5B0] antialiased selection:bg-volt selection:text-ink">
+  <canvas id="ai-bg" aria-hidden="true"></canvas>
+  <div id="cursor-glow" aria-hidden="true"></div>
+  <div id="cc-ring" aria-hidden="true"></div>
+  <div id="cc-dot" aria-hidden="true"></div>
+  <span id="top" class="absolute top-0 h-px w-px"></span>
+  <div id="progress" aria-hidden="true"></div>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[80] focus:bg-volt focus:text-ink focus:px-4 focus:py-2 focus:rounded-full focus:font-bold">Skip to content</a>
+
+  <!-- ============ NAV ============ -->
+  <header id="nav" class="fixed inset-x-0 top-0 z-50">
+    <div class="shell">
+      <nav class="mt-3 flex h-16 items-center justify-between rounded-full border border-white/10 bg-ink/70 pl-3 pr-3 backdrop-blur-xl shadow-[0_14px_40px_-20px_rgba(0,0,0,.9)]">
+        <a href="#top" class="flex shrink-0 items-center gap-2.5" aria-label="Allan Simbulan Builder home">
+          <img src="brand_assets/asb-logo.png" alt="Allan Simbulan Builder" width="40" height="40" class="h-10 w-auto rounded-xl bg-white px-1.5 py-0.5" />
+          <span class="hidden font-display text-[15px] font-extrabold tracking-tight text-white sm:block">AS<span class="text-volt">Builder</span></span>
+        </a>
+        <div class="hidden items-center gap-8 lg:flex">
+          <a href="#process" class="navlink text-sm font-semibold transition-colors duration-200">Process</a>
+          <a href="#services" class="navlink text-sm font-semibold transition-colors duration-200">Services</a>
+          <a href="#projects" class="navlink text-sm font-semibold transition-colors duration-200">Projects</a>
+          <a href="#certifications" class="navlink text-sm font-semibold transition-colors duration-200">Certifications</a>
+          <a href="#about" class="navlink text-sm font-semibold transition-colors duration-200">About</a>
+          <a href="#testimonials" class="navlink text-sm font-semibold transition-colors duration-200">Reviews</a>
+          <a href="#contact" class="navlink text-sm font-semibold transition-colors duration-200">Contact</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="theme-toggle" data-theme-toggle type="button" class="grid h-11 w-11 place-items-center rounded-full border border-white/12 text-white transition-colors hover:border-volt/50" aria-label="Switch to light mode" aria-pressed="false"><i class="ph-bold ph-sun text-lg"></i></button>
+          <a href="#contact" class="btn btn-primary hidden px-5 py-2.5 text-sm sm:inline-flex">Book a Call</a>
+          <button id="menu-btn" class="grid h-11 w-11 place-items-center rounded-full border border-white/12 text-white lg:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <i class="ph-bold ph-list text-xl"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden">
+      <div class="shell">
+        <div class="mt-2 rounded-3xl border border-white/10 bg-char p-3 shadow-[0_24px_50px_-24px_rgba(0,0,0,.9)]">
+          <a href="#process" class="block rounded-2xl px-4 py-3 font-semibold text-white hover:bg-white/5">Process</a>
+          <a href="#services" class="block rounded-2xl px-4 py-3 font-semibold text-white hover:bg-white/5">Services</a>
+          <a href="#projects" class="block rounded-2xl px-4 py-3 font-semibold text-white hover:bg-white/5">Projects</a>
+          <a href="#certifications" class="block rounded-2xl px-4 py-3 font-semibold text-white hover:bg-white/5">Certifications</a>
+          <a href="#about" class="block rounded-2xl px-4 py-3 font-semibold text-white hover:bg-white/5">About</a>
+          <a href="#testimonials" class="block rounded-2xl px-4 py-3 font-semibold text-white hover:bg-white/5">Reviews</a>
+          <a href="#contact" class="block rounded-2xl px-4 py-3 font-semibold text-white hover:bg-white/5">Contact</a>
+          <a href="#contact" class="btn btn-primary mt-1 w-full px-5 py-3">Book a Call</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="focus:outline-none">
+    <!-- ============ HERO ============ -->
+    <section aria-label="Introduction" class="relative overflow-hidden pt-32 pb-20 md:pt-36 md:pb-24">
+      <div class="gridbg"></div>
+      <div class="pointer-events-none absolute inset-0" style="background: radial-gradient(44rem 26rem at 20% 0%, rgba(253,255,0,0.12), transparent 60%), radial-gradient(40rem 30rem at 102% 38%, rgba(255,215,0,0.10), transparent 62%);"></div>
+      <div class="shell relative z-10 grid items-center gap-12 lg:grid-cols-[1.08fr_.92fr]">
+        <!-- LEFT: headline -->
+        <div>
+          <span class="reveal inline-flex flex-wrap items-center gap-x-2 gap-y-1 rounded-full border border-white/12 bg-white/[.03] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.16em] text-white/80">
+            <span class="live h-2 w-2 rounded-full bg-volt shadow-[0_0_10px_rgba(253,255,0,.8)]"></span> AI Automation Specialist <span class="text-white/35">|</span> GHL Specialist
+          </span>
+          <h1 class="mt-7 space-y-3.5 font-display font-extrabold leading-[1.04] tracking-[-0.02em]">
+            <span class="reveal flex items-center gap-3.5 text-3xl sm:text-4xl lg:text-[2.7rem]" style="--d:.05s">
+              <span class="hchip"><i class="ph-fill ph-gear-six"></i></span>
+              <span><span class="text-volt">Automate</span> <span class="text-white">workflows.</span></span>
+            </span>
+            <span class="reveal flex items-center gap-3.5 text-3xl sm:text-4xl lg:text-[2.7rem]" style="--d:.12s">
+              <span class="hchip"><i class="ph-fill ph-chart-line-up"></i></span>
+              <span><span class="text-volt">Build</span> <span class="text-white">scalable systems.</span></span>
+            </span>
+            <span class="reveal flex items-center gap-3.5 text-3xl sm:text-4xl lg:text-[2.7rem]" style="--d:.19s">
+              <span class="hchip"><i class="ph-fill ph-clock-countdown"></i></span>
+              <span><span class="text-volt">Save</span> <span class="text-white">valuable time.</span></span>
+            </span>
+          </h1>
+          <p class="reveal mt-7 max-w-xl text-lg leading-relaxed text-white/70" style="--d:.26s">
+            I design <span class="font-semibold text-volt">intelligent automations</span> and <span class="font-semibold text-volt">AI-powered</span> workflows that eliminate repetitive tasks, streamline operations, and help businesses focus on <span class="font-semibold text-volt">growth</span> and <span class="font-semibold text-volt">high-impact</span> work.
+          </p>
+          <div class="reveal mt-9 flex flex-wrap items-center gap-3" style="--d:.32s">
+            <a href="#contact" class="btn btn-primary px-7 py-4 text-base">Book a Call <span class="btn-ic"><i class="ph-bold ph-arrow-up-right text-base"></i></span></a>
+            <a href="#projects" class="btn btn-ghost px-7 py-4 text-base">View My Work</a>
+          </div>
+        </div>
+        <!-- RIGHT: AI robot HUD -->
+        <div class="reveal flex justify-center lg:justify-end" style="--d:.2s" aria-hidden="true">
+          <div class="hud">
+            <div class="layer hud-glow"></div>
+            <div class="layer ring2"></div>
+            <div class="layer ring1"></div>
+            <svg class="layer hud-ticks" viewBox="0 0 200 200">
+              <circle cx="100" cy="100" r="96" fill="none" stroke="rgba(253,255,0,.16)" stroke-width=".6" stroke-dasharray="1.5 6"/>
+              <circle cx="100" cy="100" r="74" fill="none" stroke="rgba(255,215,0,.14)" stroke-width="1" stroke-dasharray="14 9"/>
+              <path d="M100 6 a94 94 0 0 1 82 48" fill="none" stroke="rgba(253,255,0,.55)" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M100 194 a94 94 0 0 1 -82 -48" fill="none" stroke="rgba(253,255,0,.55)" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="100" cy="6" r="2.5" fill="#FDFF00"/>
+              <circle cx="100" cy="194" r="2.5" fill="#FDFF00"/>
+            </svg>
+            <div class="layer radar"></div>
+            <span class="layer scan"></span>
+            <span class="layer scan scan-b"></span>
+            <div class="layer ring3"></div>
+            <svg class="layer robot" viewBox="0 0 200 200">
+              <defs><linearGradient id="rg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFEC80"/><stop offset="1" stop-color="#E6B400"/></linearGradient></defs>
+              <g fill="none" stroke="url(#rg)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M100 40 V54"/>
+                <rect x="54" y="54" width="92" height="84" rx="24"/>
+                <path d="M50 82 H40 a4 4 0 0 0 -4 4 v22 a4 4 0 0 0 4 4 h10"/>
+                <path d="M150 82 H160 a4 4 0 0 1 4 4 v22 a4 4 0 0 1 -4 4 h-10"/>
+                <path d="M68 73 H132"/>
+                <rect x="74" y="110" width="52" height="16" rx="8"/>
+                <path d="M88 110 V126 M100 110 V126 M112 110 V126"/>
+                <path d="M100 138 V150 M76 162 q24 -14 48 0"/>
+              </g>
+              <circle cx="100" cy="34" r="6" fill="#FDFF00"/>
+              <circle class="eye" cx="82" cy="92" r="8.5" fill="#FDFF00"/>
+              <circle class="eye" cx="118" cy="92" r="8.5" fill="#FDFF00"/>
+            </svg>
+            <span class="particle p1"></span>
+            <span class="particle p2"></span>
+            <span class="particle p3"></span>
+            <span class="particle p4"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section id="process" aria-labelledby="process-h" class="border-t border-white/[.06] py-20 md:py-28">
+      <div class="shell">
+        <p class="reveal kicker">Method</p>
+        <h2 id="process-h" class="reveal mt-3 font-display text-4xl font-extrabold tracking-[-0.02em] sm:text-5xl" style="--d:.05s">How it <span class="text-volt">works</span></h2>
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="reveal panel panel-hover p-7" style="--d:.04s">
+            <div class="stepnum">01</div>
+            <h3 class="mt-5 font-display text-lg font-bold text-white">Discovery Call</h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/65">A focused 30-minute call to map your current process, find the bottlenecks, and agree on what a win looks like. No commitment.</p>
+          </article>
+          <article class="reveal panel panel-hover p-7" style="--d:.1s">
+            <div class="stepnum">02</div>
+            <h3 class="mt-5 font-display text-lg font-bold text-white">Planning &amp; Design</h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/65">I turn that into a clear blueprint built around your tools and your logic, then walk you through it before anything gets built.</p>
+          </article>
+          <article class="reveal panel panel-hover p-7" style="--d:.16s">
+            <div class="stepnum">03</div>
+            <h3 class="mt-5 font-display text-lg font-bold text-white">Build &amp; Test</h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/65">I build it, then test against real data and edge cases until it runs reliably without you having to babysit it.</p>
+          </article>
+          <article class="reveal panel panel-hover p-7" style="--d:.22s">
+            <div class="stepnum">04</div>
+            <h3 class="mt-5 font-display text-lg font-bold text-white">Handoff &amp; Support</h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/65">You get full documentation, a live walkthrough, and support after launch, so the system keeps running smoothly.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TECH STACK ============ -->
+    <section aria-labelledby="techstack-h" class="border-t border-white/[.06] py-20 md:py-24">
+      <div class="shell">
+        <h2 id="techstack-h" class="reveal font-display text-3xl font-extrabold tracking-[-0.02em] sm:text-4xl">Tech <span class="text-volt">Stack</span></h2>
+        <p class="reveal mt-3 max-w-xl text-white/65" style="--d:.05s">The platforms I design, build, and ship on, chosen because they hold up in production, not just in a demo.</p>
+        <div class="reveal marquee-wrap mt-9" style="--d:.1s">
+          <div class="marquee">
+            <!-- set A -->
+            <span class="pill"><img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="" onerror="this.style.display='none'" /> n8n</span>
+            <span class="pill"><img src="https://cdn.simpleicons.org/zapier/FF4F00" alt="" onerror="this.style.display='none'" /> Zapier</span>
+            <span class="pill"><img src="https://cdn.simpleicons.org/make/9D5CFF" alt="" onerror="this.style.display='none'" /> Make</span>
+            <span class="pill"><img src="assets/highlevel-logo.svg" alt="" onerror="this.style.display='none'" /> GoHighLevel</span>
+            <span class="pill"><img src="https://cdn.simpleicons.org/claude/D97757" alt="" onerror="this.style.display='none'" /> Claude</span>
+            <span class="pill"><img src="assets/openai-logo.svg" alt="" onerror="this.style.display='none'" /> OpenAI</span>
+            <span class="pill"><img src="https://cdn.simpleicons.org/googlegemini/AE8FF0" alt="" onerror="this.style.display='none'" /> Google Gemini</span>
+            <span class="pill"><img src="assets/restapi-logo.svg" alt="" onerror="this.style.display='none'" /> REST APIs</span>
+            <span class="pill"><img src="assets/google-logo.svg" alt="" onerror="this.style.display='none'" /> Google Workspace</span>
+            <span class="pill"><img src="https://cdn.simpleicons.org/airtable/18BFFF" alt="" onerror="this.style.display='none'" /> Airtable</span>
+            <span class="pill"><img src="assets/slack-logo.svg" alt="" onerror="this.style.display='none'" /> Slack</span>
+            <span class="pill"><img src="assets/webhooks-logo.svg" alt="" onerror="this.style.display='none'" /> Webhooks</span>
+            <!-- set B (duplicate for seamless loop, hidden from assistive tech) -->
+            <span class="pill dup" aria-hidden="true"><img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="" onerror="this.style.display='none'" /> n8n</span>
+            <span class="pill dup" aria-hidden="true"><img src="https://cdn.simpleicons.org/zapier/FF4F00" alt="" onerror="this.style.display='none'" /> Zapier</span>
+            <span class="pill dup" aria-hidden="true"><img src="https://cdn.simpleicons.org/make/9D5CFF" alt="" onerror="this.style.display='none'" /> Make</span>
+            <span class="pill dup" aria-hidden="true"><img src="assets/highlevel-logo.svg" alt="" onerror="this.style.display='none'" /> GoHighLevel</span>
+            <span class="pill dup" aria-hidden="true"><img src="https://cdn.simpleicons.org/claude/D97757" alt="" onerror="this.style.display='none'" /> Claude</span>
+            <span class="pill dup" aria-hidden="true"><img src="assets/openai-logo.svg" alt="" onerror="this.style.display='none'" /> OpenAI</span>
+            <span class="pill dup" aria-hidden="true"><img src="https://cdn.simpleicons.org/googlegemini/AE8FF0" alt="" onerror="this.style.display='none'" /> Google Gemini</span>
+            <span class="pill dup" aria-hidden="true"><img src="assets/restapi-logo.svg" alt="" onerror="this.style.display='none'" /> REST APIs</span>
+            <span class="pill dup" aria-hidden="true"><img src="assets/google-logo.svg" alt="" onerror="this.style.display='none'" /> Google Workspace</span>
+            <span class="pill dup" aria-hidden="true"><img src="https://cdn.simpleicons.org/airtable/18BFFF" alt="" onerror="this.style.display='none'" /> Airtable</span>
+            <span class="pill dup" aria-hidden="true"><img src="assets/slack-logo.svg" alt="" onerror="this.style.display='none'" /> Slack</span>
+            <span class="pill dup" aria-hidden="true"><img src="assets/webhooks-logo.svg" alt="" onerror="this.style.display='none'" /> Webhooks</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MY SERVICES ============ -->
+    <section id="services" aria-labelledby="services-h" class="border-t border-white/[.06] py-20 md:py-28">
+      <div class="shell">
+        <p class="reveal kicker">Capabilities</p>
+        <h2 id="services-h" class="reveal mt-3 font-display text-4xl font-extrabold tracking-[-0.02em] sm:text-5xl" style="--d:.05s">My <span class="text-volt">Services</span></h2>
+        <p class="reveal mt-4 max-w-xl text-white/65" style="--d:.1s">From a single workflow to a full CRM build, here's how I can help.</p>
+        <div class="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-flow-dense lg:grid-cols-3">
+          <!-- FEATURE: GoHighLevel & CRM (tall) -->
+          <article class="reveal panel panel-hover relative flex flex-col overflow-hidden p-7 lg:row-span-2" style="--d:.04s">
+            <div class="pointer-events-none absolute inset-0" style="background: radial-gradient(115% 75% at 0% 0%, rgba(253,255,0,.16), transparent 55%);"></div>
+            <div class="relative z-10 flex flex-1 flex-col">
+              <div class="ico"><i class="ph-fill ph-broadcast text-2xl"></i></div>
+              <h3 class="mt-6 font-display text-2xl font-bold text-white">GoHighLevel &amp; CRM</h3>
+              <p class="mt-3 text-sm leading-relaxed text-white/70">A GoHighLevel system that captures every lead, nurtures it, and books the call, so nothing slips through the cracks.</p>
+              <ul class="mt-auto space-y-2.5 pt-7 text-sm text-white/80">
+                <li class="flex items-center gap-2.5"><i class="ph-fill ph-check-circle text-volt"></i> Lead capture &amp; pipelines</li>
+                <li class="flex items-center gap-2.5"><i class="ph-fill ph-check-circle text-volt"></i> Automated nurture sequences</li>
+                <li class="flex items-center gap-2.5"><i class="ph-fill ph-check-circle text-volt"></i> Calendar booking built in</li>
+              </ul>
+            </div>
+          </article>
+          <!-- WIDE: Workflow Automation -->
+          <article class="reveal panel panel-hover flex items-start gap-5 p-7 lg:col-span-2" style="--d:.1s">
+            <div class="ico shrink-0"><i class="ph-bold ph-flow-arrow text-2xl"></i></div>
+            <div>
+              <h3 class="font-display text-lg font-bold text-white">Workflow Automation</h3>
+              <p class="mt-2 text-sm leading-relaxed text-white/65">The repetitive tasks eating your week, data entry, hand-offs, status updates, get handled automatically and exactly the same way every time.</p>
+            </div>
+          </article>
+          <!-- AI Agents -->
+          <article class="reveal panel panel-hover p-7" style="--d:.16s">
+            <div class="ico"><i class="ph-bold ph-robot text-2xl"></i></div>
+            <h3 class="mt-5 font-display text-lg font-bold text-white">AI Agents &amp; Chatbots</h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/65">AI agents trained on your business that qualify leads, answer common questions, and keep conversations moving 24/7.</p>
+          </article>
+          <!-- API & Webhooks -->
+          <article class="reveal panel panel-hover p-7" style="--d:.22s">
+            <div class="ico"><i class="ph-bold ph-plugs text-2xl"></i></div>
+            <h3 class="mt-5 font-display text-lg font-bold text-white">API &amp; Webhook Integrations</h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/65">Your apps, finally talking to each other. I connect them through APIs and webhooks so data moves in real time, with no manual exporting.</p>
+          </article>
+          <!-- WIDE: Funnels & Landing Pages -->
+          <article class="reveal panel panel-hover flex items-start gap-5 p-7 lg:col-span-2" style="--d:.14s">
+            <div class="ico shrink-0"><i class="ph-bold ph-browser text-2xl"></i></div>
+            <div>
+              <h3 class="font-display text-lg font-bold text-white">Funnels &amp; Landing Pages</h3>
+              <p class="mt-2 text-sm leading-relaxed text-white/65">Fast, mobile-ready pages built with one job: turning visitors into booked calls and paying clients.</p>
+            </div>
+          </article>
+          <!-- Monitoring -->
+          <article class="reveal panel panel-hover p-7" style="--d:.2s">
+            <div class="ico"><i class="ph-bold ph-shield-check text-2xl"></i></div>
+            <h3 class="mt-5 font-display text-lg font-bold text-white">Monitoring &amp; Support</h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/65">Built-in error handling, retries, and alerts catch problems and fix them quietly, before they ever reach your customers.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED PROJECTS ============ -->
+    <section id="projects" aria-labelledby="projects-h" class="border-t border-white/[.06] py-20 md:py-28">
+      <div class="shell">
+        <p class="reveal kicker">Selected work</p>
+        <h2 id="projects-h" class="reveal mt-3 font-display text-4xl font-extrabold tracking-[-0.02em] sm:text-5xl" style="--d:.05s">Featured <span class="text-volt">Projects</span></h2>
+        <p class="reveal mt-4 max-w-xl text-white/65" style="--d:.1s">Real builds, grouped by the platform they run on. Pick a platform, then open any project for the full case study.</p>
+
+        <div id="filters" class="reveal mt-8 flex flex-wrap gap-2.5" style="--d:.14s" role="group" aria-label="Filter projects by platform">
+          <button class="seg" data-filter="ghl" aria-pressed="false">GHL</button>
+          <button class="seg" data-filter="zapier" aria-pressed="false">Zapier</button>
+          <button class="seg" data-filter="make" aria-pressed="false">Make</button>
+          <button class="seg" data-filter="n8n" aria-pressed="false">n8n</button>
+        </div>
+
+        <div id="project-grid" class="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- AI Jobs Scraper + Resume Optimizer (n8n) - workflow screenshot, click to enlarge -->
+          <article class="reveal panel panel-hover flex flex-col overflow-hidden" data-plat="n8n" style="--d:.06s">
+            <button type="button" data-cert data-img="assets/project-n8njobs.png" data-title="AI Jobs Scraper + Resume Optimizer" data-meta="n8n workflow" class="group relative block aspect-[1.414/1] w-full overflow-hidden bg-[#f6f6f8]" aria-label="View the n8n workflow full size">
+              <img src="assets/project-n8njobs-thumb.png" alt="n8n workflow: a trigger validates a search query, scrapes job listings, splits and loops over each job, uses an OpenRouter chat model with a structured output parser to tailor the resume, searches Google Drive, copies a resume template, updates a Google Doc, and drafts a Gmail email" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]" onerror="this.style.display='none'" />
+              <span class="pointer-events-none absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-volt px-3 py-1.5 text-xs font-bold text-ink shadow-[0_8px_22px_-6px_rgba(253,255,0,.7)] transition-colors group-hover:bg-gold">Click to enlarge <i class="ph-bold ph-arrows-out"></i></span>
+            </button>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="flex flex-wrap gap-2"><span class="tag">n8n</span><span class="tag">AI</span><span class="tag">Resume</span></div>
+              <h3 class="mt-3 font-display text-base font-bold text-white">AI Jobs Scraper + Resume Optimizer</h3>
+              <p class="mt-3 text-sm leading-relaxed text-white/65">An n8n pipeline that scrapes job listings, then uses AI to tailor a resume for each one, builds a Google Doc from a template, and drafts the outreach email, end to end.</p>
+              <button type="button" data-sample data-title="AI Jobs Scraper + Resume Optimizer" class="btn-ghost mt-auto inline-flex w-fit items-center gap-1.5 rounded-full min-h-[44px] px-5 py-2.5 text-sm font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt/70">View case study <span class="btn-ic"><i class="ph-bold ph-arrow-right text-xs"></i></span></button>
+            </div>
+            <template class="sample-detail">
+              <img class="case-img" src="assets/project-n8njobs.png" alt="n8n workflow builder for the AI Jobs Scraper and Resume Optimizer: query validation, job scraping, a loop that uses an OpenRouter chat model and structured output parser to tailor a resume per job, Google Drive template copy, Google Doc update, and a Gmail draft" loading="lazy" decoding="async" />
+              <p class="case-cap">The live workflow in n8n, a job-hunting pipeline that tailors a resume per listing with AI.</p>
+              <p class="smp-h" style="margin-top:1.5rem">Overview</p>
+              <p class="smp-p">A job-hunting automation built in n8n. It takes a search query, scrapes the matching listings, then loops through each job and uses an AI model to rewrite the resume for that specific role. For every job it copies a resume template, fills it as a Google Doc, and prepares the outreach email, so applying to dozens of roles becomes hands-off.</p>
+              <p class="smp-h">How it is built</p>
+              <ol class="step-list">
+                <li><b>Trigger and query check.</b> The workflow starts, validates the search query, and routes an invalid query to a notice so only good searches run.</li>
+                <li><b>Scrape the jobs.</b> It pulls all matching job listings from the source, then checks the results before moving on.</li>
+                <li><b>Split and loop.</b> The results are split out and the workflow loops over each job one at a time.</li>
+                <li><b>AI resume tailoring.</b> For each job it pulls the resume content and uses an OpenRouter chat model with a structured output parser to rewrite it for that role.</li>
+                <li><b>Build the document.</b> It searches Google Drive, copies a resume template, waits for Drive to settle, then updates the new Google Doc with the tailored content.</li>
+                <li><b>Draft the outreach.</b> A final branch creates the Gmail email and sends the job details, so each application is ready to go.</li>
+              </ol>
+              <p class="smp-h">Highlights</p>
+              <ul class="feat-list">
+                <li>Scrapes job listings from a single search query</li>
+                <li>AI rewrites the resume for each specific role</li>
+                <li>OpenRouter chat model with structured output parsing</li>
+                <li>Generates a tailored Google Doc per job from a template</li>
+                <li>Drafts the outreach email in Gmail</li>
+                <li>Loops over every job, fully hands-off</li>
+              </ul>
+              <p class="smp-h">Tools &amp; Integrations</p>
+              <div class="flex flex-wrap gap-2"><span class="tag">n8n</span><span class="tag">OpenRouter AI</span><span class="tag">Google Drive</span><span class="tag">Google Docs</span><span class="tag">Gmail</span><span class="tag">HTTP</span></div>
+            </template>
+          </article>
+          <!-- AI Agent for Facebook Messenger (n8n) - workflow screenshot, click to enlarge -->
+          <article class="reveal panel panel-hover flex flex-col overflow-hidden" data-plat="n8n" style="--d:.08s">
+            <button type="button" data-cert data-img="assets/project-n8nfb.png" data-title="AI Agent for Facebook Messenger" data-meta="n8n workflow" class="group relative block aspect-[1.414/1] w-full overflow-hidden bg-[#f6f6f8]" aria-label="View the n8n workflow full size">
+              <img src="assets/project-n8nfb-thumb.png" alt="n8n workflow: a Webhook with GET and POST routes feeds an If node to Respond to Webhook for Facebook verification, and a Filter, Get a document, and AI Agent powered by a Google Gemini chat model and Simple Memory, which sends the reply out through an HTTP request" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]" onerror="this.style.display='none'" />
+              <span class="pointer-events-none absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-volt px-3 py-1.5 text-xs font-bold text-ink shadow-[0_8px_22px_-6px_rgba(253,255,0,.7)] transition-colors group-hover:bg-gold">Click to enlarge <i class="ph-bold ph-arrows-out"></i></span>
+            </button>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="flex flex-wrap gap-2"><span class="tag">n8n</span><span class="tag">AI Agent</span><span class="tag">Facebook</span></div>
+              <h3 class="mt-3 font-display text-base font-bold text-white">AI Agent for Facebook Messenger</h3>
+              <p class="mt-3 text-sm leading-relaxed text-white/65">An n8n AI agent that handles Facebook Messenger chats. A webhook receives messages, Google Gemini generates replies with memory and a knowledge doc, and an HTTP request sends them back.</p>
+              <button type="button" data-sample data-title="AI Agent for Facebook Messenger" class="btn-ghost mt-auto inline-flex w-fit items-center gap-1.5 rounded-full min-h-[44px] px-5 py-2.5 text-sm font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt/70">View case study <span class="btn-ic"><i class="ph-bold ph-arrow-right text-xs"></i></span></button>
+            </div>
+            <template class="sample-detail">
+              <img class="case-img" src="assets/project-n8nfb.png" alt="n8n workflow builder for the Facebook Messenger AI agent: a Webhook (GET and POST), an If node routing to Respond to Webhook for verification, and a Filter, Get a document, AI Agent with a Google Gemini chat model and Simple Memory, then an HTTP Request to send the reply" loading="lazy" decoding="async" />
+              <p class="case-cap">The live workflow in n8n, a Facebook Messenger AI agent powered by Google Gemini.</p>
+              <p class="smp-h" style="margin-top:1.5rem">Overview</p>
+              <p class="smp-p">A conversational AI agent for Facebook Messenger, built in n8n. A webhook receives Facebook's messages, an AI Agent powered by Google Gemini reads a knowledge document and remembers the conversation to craft a reply, and an HTTP request sends it straight back to the user. The verification handshake Facebook requires is handled in the same workflow.</p>
+              <p class="smp-h">How it is built</p>
+              <ol class="step-list">
+                <li><b>Webhook trigger (GET and POST).</b> Facebook calls this endpoint, GET for the one-time verification and POST for every incoming message.</li>
+                <li><b>If, verification check.</b> On the verification call the If node routes to Respond to Webhook so Facebook can confirm the connection.</li>
+                <li><b>Respond to Webhook.</b> Returns exactly what Facebook expects to verify and acknowledge the webhook.</li>
+                <li><b>Filter.</b> On real messages, a filter keeps only the events worth replying to.</li>
+                <li><b>Get a document.</b> Pulls a Google Doc that holds the agent's knowledge and instructions.</li>
+                <li><b>AI Agent, Google Gemini and memory.</b> Generates the reply with the Google Gemini chat model, using Simple Memory for conversation context and a tool slot for actions.</li>
+                <li><b>HTTP Request.</b> Sends the generated reply back to the user on Facebook.</li>
+              </ol>
+              <p class="smp-h">Highlights</p>
+              <ul class="feat-list">
+                <li>Handles Facebook Messenger conversations end to end</li>
+                <li>Webhook receives messages and the verification handshake</li>
+                <li>Google Gemini chat model generates the replies</li>
+                <li>Simple Memory keeps conversation context across turns</li>
+                <li>Reads a knowledge document for grounded answers</li>
+                <li>Replies sent back automatically through HTTP</li>
+              </ul>
+              <p class="smp-h">Tools &amp; Integrations</p>
+              <div class="flex flex-wrap gap-2"><span class="tag">n8n</span><span class="tag">Webhook</span><span class="tag">Google Gemini AI</span><span class="tag">AI Agent</span><span class="tag">Google Docs</span><span class="tag">HTTP Request</span><span class="tag">Facebook</span></div>
+            </template>
+          </article>
+          <!-- Asana Client Pipeline (Zapier) - 5-path workflow screenshot, click to enlarge -->
+          <article class="reveal panel panel-hover flex flex-col overflow-hidden" data-plat="zapier" style="--d:.16s">
+            <button type="button" data-cert data-img="assets/project-zapierpipeline.png" data-title="Asana Client Pipeline Automation" data-meta="Zapier workflow" class="group relative block aspect-[1.414/1] w-full overflow-hidden bg-[#f6f6f8]" aria-label="View the Zapier workflow full size">
+              <img src="assets/project-zapierpipeline-thumb.png" alt="Zapier workflow: an Asana task trigger feeds Paths by Zapier, which splits into five stage branches, Ready to Start, No Response, Quoted, Approved, and Paid and Closed, each running Gmail emails, Google Drive files, Asana subtasks, delays, filters, and AI by Zapier personalized messages" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]" onerror="this.style.display='none'" />
+              <span class="pointer-events-none absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-volt px-3 py-1.5 text-xs font-bold text-ink shadow-[0_8px_22px_-6px_rgba(253,255,0,.7)] transition-colors group-hover:bg-gold">Click to enlarge <i class="ph-bold ph-arrows-out"></i></span>
+            </button>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="flex flex-wrap gap-2"><span class="tag">Zapier</span><span class="tag">Asana</span><span class="tag">Pipeline</span></div>
+              <h3 class="mt-3 font-display text-base font-bold text-white">Asana Client Pipeline Automation</h3>
+              <p class="mt-3 text-sm leading-relaxed text-white/65">A Zapier automation driven by Asana that routes each lead into one of five pipeline stages and runs the right emails, files, and AI messages for that stage, from new lead to paid client.</p>
+              <button type="button" data-sample data-title="Asana Client Pipeline Automation" class="btn-ghost mt-auto inline-flex w-fit items-center gap-1.5 rounded-full min-h-[44px] px-5 py-2.5 text-sm font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt/70">View case study <span class="btn-ic"><i class="ph-bold ph-arrow-right text-xs"></i></span></button>
+            </div>
+            <template class="sample-detail">
+              <img class="case-img" src="assets/project-zapierpipeline.png" alt="Zapier workflow builder: an Asana task trigger into Paths by Zapier that splits into five branches (Ready to Start, No Response, Quoted, Approved, Paid and Closed), each with Gmail, Google Drive, Asana, Delay, Filter, and AI by Zapier steps" loading="lazy" decoding="async" />
+              <p class="case-cap">The live Zap in Zapier, a five-stage client pipeline driven by Asana.</p>
+              <p class="smp-h" style="margin-top:1.5rem">Overview</p>
+              <p class="smp-p">A full client pipeline built in Zapier and driven by Asana. When a task moves stage, Paths by Zapier routes it into one of five branches, Ready to Start, No Response, Quoted, Approved, or Paid and Closed, and each branch runs exactly the right actions, from folders and subtasks to timed follow-up sequences and AI-personalized welcome and recommendation emails. One Zap covers the whole journey from new lead to paid client.</p>
+              <p class="smp-h">How it is built</p>
+              <ol class="step-list">
+                <li><b>Asana trigger.</b> The Zap fires when a task is updated in Asana, carrying the lead's current stage.</li>
+                <li><b>Split into paths.</b> Paths by Zapier routes the task into one of five branches based on that stage.</li>
+                <li><b>Ready to Start.</b> Creates a Google Drive leads folder and an Asana subtask to kick off the work.</li>
+                <li><b>No Response and Quoted.</b> Sends a follow-up email, waits with a delay, finds the reply, and a filter decides whether to send a second follow-up, one sequence for general leads and one for quotes.</li>
+                <li><b>Approved.</b> Pulls the PDF from Google Drive, writes a personalized welcome message with AI by Zapier, and sends the welcome email.</li>
+                <li><b>Paid and Closed.</b> Generates an AI personalized message and sends a recommendation email to close the loop.</li>
+              </ol>
+              <p class="smp-h">Highlights</p>
+              <ul class="feat-list">
+                <li>One Zap covering five pipeline stages end to end</li>
+                <li>Asana stage changes drive the whole flow</li>
+                <li>Paths by Zapier branches each lead to the right actions</li>
+                <li>Timed follow-up sequences with delay, find-email, and filter logic</li>
+                <li>AI by Zapier writes personalized welcome and recommendation emails</li>
+                <li>Google Drive folders and PDFs, plus Asana subtasks, handled automatically</li>
+              </ul>
+              <p class="smp-h">Tools &amp; Integrations</p>
+              <div class="flex flex-wrap gap-2"><span class="tag">Zapier</span><span class="tag">Asana</span><span class="tag">Gmail</span><span class="tag">Google Drive</span><span class="tag">AI by Zapier</span><span class="tag">Paths by Zapier</span><span class="tag">Delay by Zapier</span><span class="tag">Filter by Zapier</span></div>
+            </template>
+          </article>
+          <!-- Export Xero Transactions (Make) - full scenario banner, click to enlarge -->
+          <article class="reveal panel panel-hover flex flex-col overflow-hidden" data-plat="make" style="--d:.26s">
+            <button type="button" data-cert data-img="assets/project-xero.jpg" data-title="Export Xero Transactions &rarr; Upload CSV to Asana" data-meta="Make scenario &middot; Asana, Xero, Google Sheets" class="group relative block aspect-[1.414/1] w-full overflow-hidden bg-[#f6f6f8]" aria-label="View the Make scenario full size">
+              <img src="assets/project-xero.jpg" alt="Make scenario: Asana to Xero to Router and Iterator, logging rows to Google Sheets, then uploading a CSV attachment back to Asana" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]" onerror="this.style.display='none'" />
+              <span class="pointer-events-none absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-volt px-3 py-1.5 text-xs font-bold text-ink shadow-[0_8px_22px_-6px_rgba(253,255,0,.7)] transition-colors group-hover:bg-gold">Click to enlarge <i class="ph-bold ph-arrows-out"></i></span>
+            </button>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="flex flex-wrap gap-2"><span class="tag">Make</span><span class="tag">Asana</span><span class="tag">Xero</span><span class="tag">Google Sheets</span></div>
+              <h3 class="mt-3 font-display text-base font-bold text-white">Export Xero Transactions <span class="text-volt">&rarr;</span> Upload CSV to Asana</h3>
+              <p class="mt-3 text-sm leading-relaxed text-white/65">Watches completed Asana tasks, pulls account transactions from Xero, routes through an iterator to log rows in Google Sheets, then aggregates and uploads a CSV attachment back to Asana.</p>
+              <button type="button" data-sample data-title="Export Xero Transactions &rarr; Upload CSV to Asana" class="btn-ghost mt-auto inline-flex w-fit items-center gap-1.5 rounded-full min-h-[44px] px-5 py-2.5 text-sm font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt/70">View case study <span class="btn-ic"><i class="ph-bold ph-arrow-right text-xs"></i></span></button>
+            </div>
+            <template class="sample-detail">
+              <img class="case-img" src="assets/project-xero.jpg" alt="The Make scenario canvas: Asana watches completed tasks, Xero makes an API call, a router splits into an iterator that adds Google Sheets rows and a second path that sleeps, reads the range, aggregates a CSV, uploads it to Asana, then clears the range" loading="lazy" decoding="async" />
+              <p class="case-cap">The live scenario in Make, 10 modules across two router paths.</p>
+              <p class="smp-h" style="margin-top:1.5rem">Overview</p>
+              <p class="smp-p">A Make scenario that turns a finished Asana task into a fully reconciled Xero export. It pulls the transactions, logs every line to Google Sheets, then rolls them into a single CSV and files it back on the original Asana task, with no manual copy-paste at any step.</p>
+              <p class="smp-h">Scenario breakdown</p>
+              <ol class="step-list">
+                <li><b>Asana, Watch Completed Tasks.</b> The scenario triggers the moment a task is marked complete.</li>
+                <li><b>Xero, Make an API Call.</b> Pulls the account transactions tied to that task straight from Xero.</li>
+                <li><b>Router.</b> Splits the flow into two paths that run from the same data.</li>
+                <li><b>Path 1, Iterator to Google Sheets (Add a Row).</b> Loops through each transaction and writes it as its own row.</li>
+                <li><b>Path 2, Sleep to Get Range Values to Text Aggregator.</b> Waits for the rows to settle, reads the range back, and aggregates it into one CSV body.</li>
+                <li><b>Asana, Upload an Attachment.</b> Files the finished CSV back onto the original Asana task.</li>
+                <li><b>Google Sheets, Clear Values from a Range.</b> Wipes the working range so the next run starts clean.</li>
+              </ol>
+              <p class="smp-h">Highlights</p>
+              <ul class="feat-list">
+                <li>10 modules wired into a single end-to-end scenario</li>
+                <li>Router and iterator logic for per-transaction processing</li>
+                <li>Every transaction logged automatically to Google Sheets</li>
+                <li>CSV aggregated and uploaded back to Asana, 100% automated</li>
+                <li>Self-cleaning range so each run is repeatable</li>
+              </ul>
+              <p class="smp-h">Tools &amp; Integrations</p>
+              <div class="flex flex-wrap gap-2"><span class="tag">Make</span><span class="tag">Asana</span><span class="tag">Xero</span><span class="tag">Google Sheets</span></div>
+            </template>
+          </article>
+          <!-- Auto Sort Gmail Attachments (Make) - full scenario banner, click to enlarge -->
+          <article class="reveal panel panel-hover flex flex-col overflow-hidden" data-plat="make" style="--d:.3s">
+            <button type="button" data-cert data-img="assets/project-gmail.jpg" data-title="Auto Sort Gmail Attachments on Drive" data-meta="Make scenario &middot; Gmail, Google Gemini AI, Drive, Sheets" class="group relative block aspect-[1.414/1] w-full overflow-hidden bg-[#f6f6f8]" aria-label="View the Make scenario full size">
+              <img src="assets/project-gmail.jpg" alt="Make scenario: Gmail watches emails and lists attachments, Google Gemini classifies each file, then uploads to the right Google Drive folder and logs it in Google Sheets" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]" onerror="this.style.display='none'" />
+              <span class="pointer-events-none absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-volt px-3 py-1.5 text-xs font-bold text-ink shadow-[0_8px_22px_-6px_rgba(253,255,0,.7)] transition-colors group-hover:bg-gold">Click to enlarge <i class="ph-bold ph-arrows-out"></i></span>
+            </button>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="flex flex-wrap gap-2"><span class="tag">Make</span><span class="tag">Gmail</span><span class="tag">Google Gemini AI</span><span class="tag">Google Drive</span><span class="tag">Google Sheets</span></div>
+              <h3 class="mt-3 font-display text-base font-bold text-white">Auto Sort Gmail Attachments on Drive</h3>
+              <p class="mt-3 text-sm leading-relaxed text-white/65">Monitors Gmail for new emails, iterates through attachments, uses Google Gemini AI to classify files, then uploads to the correct Google Drive folder and logs everything in Google Sheets.</p>
+              <button type="button" data-sample data-title="Auto Sort Gmail Attachments on Drive" class="btn-ghost mt-auto inline-flex w-fit items-center gap-1.5 rounded-full min-h-[44px] px-5 py-2.5 text-sm font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt/70">View case study <span class="btn-ic"><i class="ph-bold ph-arrow-right text-xs"></i></span></button>
+            </div>
+            <template class="sample-detail">
+              <img class="case-img" src="assets/project-gmail.jpg" alt="The Make scenario canvas: Gmail watches emails and lists attachments, Google Gemini analyzes each file and generates a new file name, Google Drive uploads the file, Google Sheets logs it, then Gmail sends an email notification" loading="lazy" decoding="async" />
+              <p class="case-cap">The live scenario in Make, a linear file-sorting pipeline driven by Google Gemini AI.</p>
+              <p class="smp-h" style="margin-top:1.5rem">Overview</p>
+              <p class="smp-p">An inbox-to-Drive pipeline that reads every incoming attachment, lets Google Gemini AI decide what it is and rename it sensibly, files it in the right Drive folder, and keeps a running log, so attachments never pile up unsorted again.</p>
+              <p class="smp-h">Scenario breakdown</p>
+              <ol class="step-list">
+                <li><b>Gmail, Watch Emails.</b> Fires on each new incoming email.</li>
+                <li><b>Gmail, List Email Attachments and Media.</b> Pulls every attachment off that email.</li>
+                <li><b>Google Gemini AI, Upload File to Analyze.</b> Sends each file to Gemini to read what it actually contains.</li>
+                <li><b>Google Gemini AI, Generate New File Name.</b> Gemini returns a clean, descriptive name based on the contents.</li>
+                <li><b>Google Drive, Upload a File.</b> Saves the renamed file into the correct Drive folder.</li>
+                <li><b>Google Sheets, Add a Row.</b> Logs the file, its new name, and its source for an audit trail.</li>
+                <li><b>Gmail, Send an Email.</b> Sends a confirmation once the file is filed.</li>
+              </ol>
+              <p class="smp-h">Highlights</p>
+              <ul class="feat-list">
+                <li>Reads and files every attachment automatically</li>
+                <li>Google Gemini AI names files by what is inside them</li>
+                <li>Sorts into the right Drive folder, no manual triage</li>
+                <li>Full audit log in Google Sheets plus an email confirmation</li>
+              </ul>
+              <p class="smp-h">Tools &amp; Integrations</p>
+              <div class="flex flex-wrap gap-2"><span class="tag">Make</span><span class="tag">Gmail</span><span class="tag">Google Gemini AI</span><span class="tag">Google Drive</span><span class="tag">Google Sheets</span></div>
+            </template>
+          </article>
+          <!-- EZMLO 6-Stage Loan Automation (GoHighLevel) - full workflow screenshot, click to enlarge -->
+          <article class="reveal panel panel-hover flex flex-col overflow-hidden" data-plat="ghl" style="--d:.32s">
+            <button type="button" data-cert data-img="assets/project-ezmlo.png" data-title="EZMLO 6-Stage Loan Automation" data-meta="GoHighLevel workflow" class="group relative block aspect-[1.414/1] w-full overflow-hidden bg-[#f6f6f8]" aria-label="View the GoHighLevel workflow full size">
+              <img src="assets/project-ezmlo.png" alt="GoHighLevel workflow builder for the EZMLO 6-stage loan automation: one trigger at the top branches into six parallel stage tracks, each a sequence of emails, texts, condition splits and wait steps, with sub-branches and exit points lower down" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]" onerror="this.style.display='none'" />
+              <span class="pointer-events-none absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-volt px-3 py-1.5 text-xs font-bold text-ink shadow-[0_8px_22px_-6px_rgba(253,255,0,.7)] transition-colors group-hover:bg-gold">Click to enlarge <i class="ph-bold ph-arrows-out"></i></span>
+            </button>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="flex flex-wrap gap-2"><span class="tag">GoHighLevel</span><span class="tag">Workflow</span><span class="tag">Loans</span></div>
+              <h3 class="mt-3 font-display text-base font-bold text-white">EZMLO 6-Stage Loan Automation</h3>
+              <p class="mt-3 max-w-2xl text-sm leading-relaxed text-white/65">A complete GoHighLevel workflow that runs the EZMLO loan journey across all six stages, dozens of automated emails, texts, condition splits and pipeline updates branching from a single enrollment trigger.</p>
+              <button type="button" data-sample data-title="EZMLO 6-Stage Loan Automation" class="btn-ghost mt-auto inline-flex w-fit items-center gap-1.5 rounded-full min-h-[44px] px-5 py-2.5 text-sm font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt/70">View case study <span class="btn-ic"><i class="ph-bold ph-arrow-right text-xs"></i></span></button>
+            </div>
+            <template class="sample-detail">
+              <img class="case-img" src="assets/project-ezmlo.png" alt="GoHighLevel workflow builder for the EZMLO 6-stage loan automation: one trigger branches into six parallel stage tracks of emails, texts, conditions and wait steps, with sub-branches and exit points" loading="lazy" decoding="async" />
+              <p class="case-cap">The live workflow in GoHighLevel, the six-stage loan journey built as one branching automation.</p>
+              <p class="smp-h" style="margin-top:1.5rem">Overview</p>
+              <p class="smp-p">A production GoHighLevel workflow that runs the entire EZMLO loan journey end to end. A single enrollment trigger sets the contact up, then the automation fans out into the six stages of the loan, each running its own sequence of borrower and team touchpoints, all inside GHL's workflow builder.</p>
+              <p class="smp-h">How it is built</p>
+              <ol class="step-list">
+                <li><b>Enrollment trigger.</b> One trigger at the top starts the workflow and tags the contact so every later step can track where they are.</li>
+                <li><b>Six stage tracks.</b> The flow branches into six parallel columns, one per stage of the loan, so each contact follows the right path for their point in the journey.</li>
+                <li><b>Sequenced outreach.</b> Each track is a top-to-bottom run of automated emails and SMS, spaced by wait timers so every touch lands at the right moment.</li>
+                <li><b>If/else conditions.</b> Condition nodes along the way route each contact by their status and response, so nobody receives the wrong message.</li>
+                <li><b>Pipeline and field updates.</b> Steps update the opportunity stage and contact fields as the loan moves, keeping the CRM in sync automatically.</li>
+                <li><b>Sub-branches and clean exits.</b> Several stages split again into sub-paths with their own end points to handle edge cases and exit contacts cleanly.</li>
+              </ol>
+              <p class="smp-h">Highlights</p>
+              <ul class="feat-list">
+                <li>One workflow covering all six stages of the loan, end to end</li>
+                <li>Dozens of automated email, SMS and internal steps</li>
+                <li>If/else branching that routes borrowers by status</li>
+                <li>Wait timers that pace every touchpoint</li>
+                <li>Opportunity and field updates that keep the pipeline current</li>
+              </ul>
+              <p class="smp-h">Tools &amp; Integrations</p>
+              <div class="flex flex-wrap gap-2"><span class="tag">GoHighLevel</span><span class="tag">Workflows</span><span class="tag">Email</span><span class="tag">SMS</span><span class="tag">Pipelines</span><span class="tag">Tags &amp; Fields</span></div>
+            </template>
+          </article>
+          <!-- Lead Reply Package Router (GoHighLevel) - full workflow screenshot, click to enlarge -->
+          <article class="reveal panel panel-hover flex flex-col overflow-hidden" data-plat="ghl" style="--d:.34s">
+            <button type="button" data-cert data-img="assets/project-leadreply.png" data-title="Lead Reply Package Router" data-meta="GoHighLevel workflow" class="group relative block aspect-[1.414/1] w-full overflow-hidden bg-[#f6f6f8]" aria-label="View the GoHighLevel workflow full size">
+              <img src="assets/project-leadreply.png" alt="GoHighLevel workflow: a Customer Replied trigger feeds a condition that routes the reply into four paths, Package A, B and C each add an intent tag, email that package's details and payment, and send an internal notification, plus a None path that tags and emails leads whose reply matches no package" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]" onerror="this.style.display='none'" />
+              <span class="pointer-events-none absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-volt px-3 py-1.5 text-xs font-bold text-ink shadow-[0_8px_22px_-6px_rgba(253,255,0,.7)] transition-colors group-hover:bg-gold">Click to enlarge <i class="ph-bold ph-arrows-out"></i></span>
+            </button>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="flex flex-wrap gap-2"><span class="tag">GoHighLevel</span><span class="tag">Workflow</span><span class="tag">Lead Reply</span></div>
+              <h3 class="mt-3 font-display text-base font-bold text-white">Lead Reply Package Router</h3>
+              <p class="mt-3 max-w-2xl text-sm leading-relaxed text-white/65">A GoHighLevel workflow that reads a lead's reply, detects which package they want (A, B or C), tags the intent, emails that package's details and payment, and alerts the team, with a fallback path when the reply matches none.</p>
+              <button type="button" data-sample data-title="Lead Reply Package Router" class="btn-ghost mt-auto inline-flex w-fit items-center gap-1.5 rounded-full min-h-[44px] px-5 py-2.5 text-sm font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt/70">View case study <span class="btn-ic"><i class="ph-bold ph-arrow-right text-xs"></i></span></button>
+            </div>
+            <template class="sample-detail">
+              <img class="case-img" src="assets/project-leadreply.png" alt="GoHighLevel workflow: a Customer Replied trigger feeds a condition that routes into Package A, B, C paths (each tags intent, emails package details and payment, and notifies the team) plus a None fallback path" loading="lazy" decoding="async" />
+              <p class="case-cap">The live workflow in GoHighLevel, a reply-routing automation with three package paths and a fallback.</p>
+              <p class="smp-h" style="margin-top:1.5rem">Overview</p>
+              <p class="smp-p">When a lead replies saying which package they want, this workflow routes them automatically. It reads the message, matches it to Package A, B or C, tags the intent, sends that package's details and payment information, and alerts the team, with no one manually reading and sorting replies. A fallback path catches any reply that does not match a package.</p>
+              <p class="smp-h">How it is built</p>
+              <ol class="step-list">
+                <li><b>Trigger, Customer Replied (Packages A/B/C).</b> The workflow starts the moment a lead replies to the package message.</li>
+                <li><b>Condition, I Want To Avail Package.</b> A branch node checks the reply and routes it into one of four paths.</li>
+                <li><b>Package A path.</b> If the reply is "I want to avail package A": add the intent tag, email Package A details and payment, then send an internal team notification.</li>
+                <li><b>Package B path.</b> Same sequence for Package B: tag intent, email Package B details and payment, notify the team.</li>
+                <li><b>Package C path.</b> Same sequence for Package C.</li>
+                <li><b>None path.</b> When the reply matches no package, it tags the lead as not following instruction and emails them accordingly.</li>
+              </ol>
+              <p class="smp-h">Highlights</p>
+              <ul class="feat-list">
+                <li>Reads lead replies and routes them automatically by package</li>
+                <li>Three package paths, each with its own tag, email and team alert</li>
+                <li>Intent tags so every lead is segmented for follow-up</li>
+                <li>Package-specific details and payment emails sent instantly</li>
+                <li>Fallback path for replies that do not match a package</li>
+              </ul>
+              <p class="smp-h">Tools &amp; Integrations</p>
+              <div class="flex flex-wrap gap-2"><span class="tag">GoHighLevel</span><span class="tag">Workflows</span><span class="tag">Conditions</span><span class="tag">Tags</span><span class="tag">Email</span><span class="tag">Internal Notifications</span></div>
+            </template>
+          </article>
+          <!-- Facebook Comment to DM (GoHighLevel) - workflow screenshot, click to enlarge -->
+          <article class="reveal panel panel-hover flex flex-col overflow-hidden" data-plat="ghl" style="--d:.36s">
+            <button type="button" data-cert data-img="assets/project-facebook.png" data-title="Facebook Comment to DM Automation" data-meta="GoHighLevel workflow" class="group relative block aspect-[1.414/1] w-full overflow-hidden bg-[#f6f6f8]" aria-label="View the GoHighLevel workflow full size">
+              <img src="assets/project-facebook-thumb.png" alt="GoHighLevel workflow: a Facebook comment trigger filtered to the Allan Tech VA page and post type, feeding a Respond On Comment action, then a Facebook interactive messenger action, then a Default Timeout" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]" onerror="this.style.display='none'" />
+              <span class="pointer-events-none absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-volt px-3 py-1.5 text-xs font-bold text-ink shadow-[0_8px_22px_-6px_rgba(253,255,0,.7)] transition-colors group-hover:bg-gold">Click to enlarge <i class="ph-bold ph-arrows-out"></i></span>
+            </button>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="flex flex-wrap gap-2"><span class="tag">GoHighLevel</span><span class="tag">Workflow</span><span class="tag">Facebook</span></div>
+              <h3 class="mt-3 font-display text-base font-bold text-white">Facebook Comment to DM Automation</h3>
+              <p class="mt-3 text-sm leading-relaxed text-white/65">A GoHighLevel workflow that watches a Facebook page for new comments, auto-replies on the comment, then opens a Messenger conversation with the commenter, with a timeout path if they go quiet.</p>
+              <button type="button" data-sample data-title="Facebook Comment to DM Automation" class="btn-ghost mt-auto inline-flex w-fit items-center gap-1.5 rounded-full min-h-[44px] px-5 py-2.5 text-sm font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt/70">View case study <span class="btn-ic"><i class="ph-bold ph-arrow-right text-xs"></i></span></button>
+            </div>
+            <template class="sample-detail">
+              <img class="case-img" src="assets/project-facebook.png" alt="GoHighLevel workflow builder for the Facebook comments automation: a Facebook comment trigger (Page is Allan Tech VA, filtered by post type) feeds Respond On Comment, then Facebook interactive messenger, then Default Timeout" loading="lazy" decoding="async" />
+              <p class="case-cap">The live workflow in GoHighLevel, a Facebook comment to Messenger automation.</p>
+              <p class="smp-h" style="margin-top:1.5rem">Overview</p>
+              <p class="smp-p">When someone comments on a Facebook post, this workflow engages them automatically. It replies to the comment in public, then opens a private Messenger conversation to keep the lead moving, with no one watching the page in real time. A timeout path handles commenters who do not reply.</p>
+              <p class="smp-h">How it is built</p>
+              <ol class="step-list">
+                <li><b>Trigger, Facebook Comment(s).</b> Fires when a new comment lands on the page, filtered to the Allan Tech VA page and the right post type so only the intended posts trigger it.</li>
+                <li><b>Respond On Comment.</b> Posts an automatic public reply to the comment, so every commenter gets an instant response.</li>
+                <li><b>Facebook Interactive Messenger.</b> Opens a private Messenger conversation with the commenter to continue one to one.</li>
+                <li><b>Default Timeout.</b> If the commenter does not reply within the set window, the timeout path takes over so the workflow never hangs.</li>
+              </ol>
+              <p class="smp-h">Highlights</p>
+              <ul class="feat-list">
+                <li>Watches a Facebook page for new comments automatically</li>
+                <li>Public auto-reply on every qualifying comment</li>
+                <li>Moves the conversation into private Messenger</li>
+                <li>Post-type filtering so only the right posts trigger it</li>
+                <li>Timeout handling for commenters who go quiet</li>
+              </ul>
+              <p class="smp-h">Tools &amp; Integrations</p>
+              <div class="flex flex-wrap gap-2"><span class="tag">GoHighLevel</span><span class="tag">Workflows</span><span class="tag">Facebook</span><span class="tag">Messenger</span><span class="tag">Triggers &amp; Filters</span></div>
+            </template>
+          </article>
+        </div>
+        <p id="filter-empty" class="mt-8 hidden text-center text-sm text-white/65">No projects on this platform yet.</p>
+      </div>
+    </section>
+
+    <!-- ============ CERTIFICATIONS ============ -->
+    <section id="certifications" aria-labelledby="certifications-h" class="border-t border-white/[.06] py-20 md:py-28">
+      <div class="shell">
+        <div class="text-center">
+          <p class="reveal kicker">Credentials</p>
+          <h2 id="certifications-h" class="reveal mx-auto mt-3 max-w-3xl font-display text-4xl font-extrabold tracking-[-0.02em] sm:text-5xl" style="--d:.05s">Trained &amp; <span class="text-volt">Certified</span></h2>
+          <p class="reveal mx-auto mt-4 max-w-2xl text-white/65" style="--d:.1s">Completion certificates from my hands-on training with Technical Virtual Assistants PH, across HighLevel, n8n, Make, Zapier, and prompt engineering.</p>
+        </div>
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <button type="button" data-cert data-img="assets/cert-highlevel-crm.jpg" data-title="GoHighLevel &amp; CRM" data-meta="HighLevel CRM Full Training &middot; Technical Virtual Assistants PH &middot; May 13, 2026" class="reveal panel panel-hover group flex flex-col w-full overflow-hidden text-left" style="--d:.04s">
+            <div class="aspect-[1.414/1] w-full shrink-0 overflow-hidden bg-white">
+              <img src="assets/cert-highlevel-crm.jpg" alt="GoHighLevel and CRM certificate awarded to Allan Simbulan by Technical Virtual Assistants PH" loading="lazy" decoding="async" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" onerror="certFallback(this)" />
+            </div>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="flex items-center gap-2"><i class="ph-fill ph-seal-check text-volt"></i><h3 class="font-display text-base font-bold text-white">GoHighLevel &amp; CRM</h3></div>
+              <p class="mt-2 text-sm leading-relaxed text-white/65">CRM &amp; pipelines, sales funnels, website builder, email marketing, booking, workflow automations with API, and AI agents.</p>
+              <div class="mt-3 flex items-center justify-between text-xs text-white/65"><span>Technical Virtual Assistants PH</span><span>May 2026</span></div>
+              <span class="mt-auto pt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-volt">View certificate <i class="ph-bold ph-arrows-out"></i></span>
+            </div>
+          </button>
+          <button type="button" data-cert data-img="assets/cert-n8n.jpg" data-title="AI Automation with n8n" data-meta="Technical Virtual Assistants PH &middot; April 3, 2026" class="reveal panel panel-hover group flex flex-col w-full overflow-hidden text-left" style="--d:.1s">
+            <div class="aspect-[1.414/1] w-full shrink-0 overflow-hidden bg-white">
+              <img src="assets/cert-n8n.jpg" alt="AI Automation with n8n certificate awarded to Allan Simbulan by Technical Virtual Assistants PH" loading="lazy" decoding="async" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" onerror="certFallback(this)" />
+            </div>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="flex items-center gap-2"><i class="ph-fill ph-seal-check text-volt"></i><h3 class="font-display text-base font-bold text-white">AI Automation with n8n</h3></div>
+              <p class="mt-2 text-sm leading-relaxed text-white/65">AI agents vs. workflows, n8n server setup, building workflows and nodes, triggers, actions, branching, looping, and connecting to APIs.</p>
+              <div class="mt-3 flex items-center justify-between text-xs text-white/65"><span>Technical Virtual Assistants PH</span><span>April 2026</span></div>
+              <span class="mt-auto pt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-volt">View certificate <i class="ph-bold ph-arrows-out"></i></span>
+            </div>
+          </button>
+          <button type="button" data-cert data-img="assets/cert-make.jpg" data-title="No-Code Automation with Make" data-meta="Technical Virtual Assistants PH &middot; February 10, 2026" class="reveal panel panel-hover group flex flex-col w-full overflow-hidden text-left" style="--d:.16s">
+            <div class="aspect-[1.414/1] w-full shrink-0 overflow-hidden bg-white">
+              <img src="assets/cert-make.jpg" alt="No-Code Automation with Make.com certificate awarded to Allan Simbulan by Technical Virtual Assistants PH" loading="lazy" decoding="async" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" onerror="certFallback(this)" />
+            </div>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="flex items-center gap-2"><i class="ph-fill ph-seal-check text-volt"></i><h3 class="font-display text-base font-bold text-white">No-Code Automation with Make</h3></div>
+              <p class="mt-2 text-sm leading-relaxed text-white/65">Interface walkthrough, scenario structure, filters, triggers, app connections, actions, error handling, and HTTP requests.</p>
+              <div class="mt-3 flex items-center justify-between text-xs text-white/65"><span>Technical Virtual Assistants PH</span><span>February 2026</span></div>
+              <span class="mt-auto pt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-volt">View certificate <i class="ph-bold ph-arrows-out"></i></span>
+            </div>
+          </button>
+          <button type="button" data-cert data-img="assets/cert-zapier.jpg" data-title="No-Code Automation with Zapier" data-meta="Technical Virtual Assistants PH &middot; January 21, 2026" class="reveal panel panel-hover group flex flex-col w-full overflow-hidden text-left" style="--d:.04s">
+            <div class="aspect-[1.414/1] w-full shrink-0 overflow-hidden bg-white">
+              <img src="assets/cert-zapier.jpg" alt="No-Code Automation with Zapier certificate awarded to Allan Simbulan by Technical Virtual Assistants PH" loading="lazy" decoding="async" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" onerror="certFallback(this)" />
+            </div>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="flex items-center gap-2"><i class="ph-fill ph-seal-check text-volt"></i><h3 class="font-display text-base font-bold text-white">No-Code Automation with Zapier</h3></div>
+              <p class="mt-2 text-sm leading-relaxed text-white/65">Triggers, Formatter, Filter, Paths, Looping, Sub-Zaps, Webhooks, and AI by Zapier.</p>
+              <div class="mt-3 flex items-center justify-between text-xs text-white/65"><span>Technical Virtual Assistants PH</span><span>January 2026</span></div>
+              <span class="mt-auto pt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-volt">View certificate <i class="ph-bold ph-arrows-out"></i></span>
+            </div>
+          </button>
+          <button type="button" data-cert data-img="assets/cert-prompt-engineering.jpg" data-title="Prompt Engineering" data-meta="Technical Virtual Assistants PH &middot; February 12, 2026" class="reveal panel panel-hover group flex flex-col w-full overflow-hidden text-left" style="--d:.1s">
+            <div class="aspect-[1.414/1] w-full shrink-0 overflow-hidden bg-white">
+              <img src="assets/cert-prompt-engineering.jpg" alt="Prompt Engineering certificate awarded to Allan Simbulan by Technical Virtual Assistants PH" loading="lazy" decoding="async" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" onerror="certFallback(this)" />
+            </div>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="flex items-center gap-2"><i class="ph-fill ph-seal-check text-volt"></i><h3 class="font-display text-base font-bold text-white">Prompt Engineering</h3></div>
+              <p class="mt-2 text-sm leading-relaxed text-white/65">Prompt fundamentals, anatomy of a good prompt, practical techniques, real-world scenarios, and building prompt workflows.</p>
+              <div class="mt-3 flex items-center justify-between text-xs text-white/65"><span>Technical Virtual Assistants PH</span><span>February 2026</span></div>
+              <span class="mt-auto pt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-volt">View certificate <i class="ph-bold ph-arrows-out"></i></span>
+            </div>
+          </button>
+          <article class="reveal panel flex flex-col items-center justify-center p-8 text-center" style="--d:.16s">
+            <p class="font-display text-lg font-bold text-white">Want a system like these in your business?</p>
+            <a href="#contact" class="btn btn-primary mt-5 px-6 py-3 text-sm">Book a Discovery Call <span class="btn-ic"><i class="ph-bold ph-arrow-up-right"></i></span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" aria-labelledby="about-h" class="border-t border-white/[.06] py-20 md:py-28">
+      <div class="shell grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <!-- photo card -->
+        <div class="reveal relative mx-auto w-full max-w-sm" style="--d:.05s">
+          <div class="pointer-events-none absolute -inset-4 -z-10 rounded-[2rem]" style="background: radial-gradient(60% 60% at 50% 32%, rgba(253,255,0,.16), transparent 70%);"></div>
+          <div class="rounded-[1.8rem] border-2 border-volt/60 bg-gradient-to-b from-white/[.07] to-white/[.02] p-3 shadow-[0_34px_80px_-36px_rgba(253,255,0,.4)]">
+            <div class="relative aspect-[4/5] overflow-hidden rounded-[1.35rem]">
+              <!-- branded backdrop: warm gold glow + faint tech grid -->
+              <div class="absolute inset-0" style="background: radial-gradient(72% 56% at 50% 15%, rgba(253,255,0,0.20), rgba(255,215,0,0.05) 45%, transparent 62%), linear-gradient(180deg,#1c1c17 0%,#101010 55%,#0b0b0a 100%);"></div>
+              <div class="absolute inset-0 opacity-60" style="background-image: linear-gradient(rgba(255,255,255,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.05) 1px,transparent 1px); background-size:30px 30px; -webkit-mask-image:radial-gradient(75% 72% at 50% 26%,#000,transparent 80%); mask-image:radial-gradient(75% 72% at 50% 26%,#000,transparent 80%);"></div>
+              <!-- soft ground shadow so the cutout doesn't float -->
+              <div class="absolute bottom-[5%] left-1/2 h-[11%] w-[62%] -translate-x-1/2 rounded-[50%] blur-[3px]" style="background:radial-gradient(closest-side, rgba(0,0,0,0.5), transparent 75%);"></div>
+              <!-- cutout portrait, resized to stand on the backdrop -->
+              <img src="assets/allan.png" alt="Allan Simbulan, AI Automation and GoHighLevel Specialist, holding a laptop" width="420" height="594" loading="lazy" decoding="async" class="absolute bottom-0 left-1/2 h-[109%] w-auto max-w-none -translate-x-1/2" onerror="photoFallback(this)" />
+            </div>
+          </div>
+          <button type="button" class="pbadge absolute -right-3 top-6 inline-flex items-center gap-1.5 rounded-full border border-white/12 bg-ink px-3.5 py-2 text-xs font-bold text-white shadow-[0_16px_34px_-14px_rgba(0,0,0,.85)]"><i class="ph-fill ph-broadcast text-volt"></i> GHL Specialist</button>
+          <button type="button" class="pbadge absolute -left-3 bottom-7 inline-flex items-center gap-1.5 rounded-full border border-white/12 bg-ink px-3.5 py-2 text-xs font-bold text-white shadow-[0_16px_34px_-14px_rgba(0,0,0,.85)]"><i class="ph-fill ph-rocket-launch text-volt"></i> AI Automation Specialist</button>
+        </div>
+        <!-- text -->
+        <div>
+          <p class="reveal kicker">About</p>
+          <h2 id="about-h" class="reveal mt-3 font-display text-4xl font-extrabold leading-[1.1] tracking-[-0.02em] sm:text-5xl" style="--d:.05s">The Person Behind the <span class="text-volt">AI Automation &amp; GHL Specialist</span></h2>
+          <p class="reveal mt-5 font-display text-xl font-bold text-white" style="--d:.1s">Hi, I'm Allan Simbulan</p>
+          <p class="reveal mt-4 max-w-xl leading-relaxed text-white/70" style="--d:.14s">My name is Allan Simbulan, and I'm an AI Automation Specialist and GoHighLevel Specialist with over 3 years of hands-on experience building CRM systems, sales funnels, websites, workflow automations, and AI-powered business solutions. I specialize in helping businesses streamline operations, automate repetitive tasks, improve lead management, and create scalable systems that drive growth.</p>
+          <p class="reveal mt-4 max-w-xl leading-relaxed text-white/70" style="--d:.18s">My expertise includes GoHighLevel, n8n, Make.com, Zapier, API integrations, webhooks, email and SMS marketing, and business process automation. I'm passionate about using technology and automation to increase efficiency, improve customer experiences, and help businesses save time while achieving better results.</p>
+          <div class="reveal mt-7 flex flex-wrap gap-3" style="--d:.22s">
+            <a href="#contact" class="btn btn-primary px-6 py-3 text-sm">Work With Me <span class="btn-ic"><i class="ph-bold ph-arrow-up-right"></i></span></a>
+            <a href="#projects" class="btn btn-ghost px-6 py-3 text-sm">See My Work</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section id="testimonials" aria-labelledby="testimonials-h" class="overflow-hidden border-t border-white/[.06] py-20 md:py-28">
+      <div class="shell">
+        <div class="text-center">
+          <h2 id="testimonials-h" class="reveal mx-auto max-w-3xl font-display text-4xl font-extrabold tracking-[-0.02em] sm:text-5xl">What Clients <span class="text-volt">Say</span></h2>
+          <p class="reveal mx-auto mt-4 max-w-2xl text-white/65" style="--d:.1s">A few words from the people I've built funnels, automations, and GoHighLevel systems for.</p>
+        </div>
+      </div>
+
+      <div class="reveal mt-12" style="--d:.14s">
+        <div class="t-wrap">
+          <div class="t-track">
+            <!-- ===== base set (real testimonials, visible to assistive tech) ===== -->
+            <figure class="tcard panel flex flex-col p-7 sm:p-8">
+              <div class="flex items-center justify-between">
+                <span class="stars" role="img" aria-label="Rated 5 out of 5 stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></span>
+                <i class="ph-fill ph-quotes text-4xl" style="color:rgba(253,255,0,.18)"></i>
+              </div>
+              <blockquote class="mt-5 leading-[1.7] text-white/80">“Working with Allan is a miracle. He is a guy of understanding, kind and passionate about his work, and someone I can recommend if you need help building a perfect funnel for your business. Thank you so much, Mr. Allan, for the great work you have done for me.”</blockquote>
+              <figcaption class="mt-auto flex items-center gap-4 pt-7">
+                <img src="assets/client-steve.jpg" alt="" loading="lazy" decoding="async" width="48" height="48" class="h-12 w-12 shrink-0 rounded-full object-cover ring-2 ring-white/15" onerror="this.onerror=null;this.src='https://placehold.co/96x96/171717/FDFF00/png?text=SO&font=poppins'" />
+                <span><span class="block font-display font-bold text-white">Steve Odira</span><span class="block text-sm text-white/60">Business Owner</span></span>
+              </figcaption>
+            </figure>
+            <figure class="tcard panel flex flex-col p-7 sm:p-8">
+              <div class="flex items-center justify-between">
+                <span class="stars" role="img" aria-label="Rated 5 out of 5 stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></span>
+                <i class="ph-fill ph-quotes text-4xl" style="color:rgba(253,255,0,.18)"></i>
+              </div>
+              <blockquote class="mt-5 leading-[1.7] text-white/80">“Allan was a game changer! He made the entire process smooth and effortless, delivering a high-converting funnel that exceeded my expectations. If you want results without the hassle, don't wait, hire Allan now. It's 100% worth it!”</blockquote>
+              <figcaption class="mt-auto flex items-center gap-4 pt-7">
+                <img src="assets/client-pietro.jpg" alt="" loading="lazy" decoding="async" width="48" height="48" class="h-12 w-12 shrink-0 rounded-full object-cover ring-2 ring-white/15" onerror="this.onerror=null;this.src='https://placehold.co/96x96/171717/FDFF00/png?text=PG&font=poppins'" />
+                <span><span class="block font-display font-bold text-white">Pietro Ginevri</span><span class="block text-sm text-white/60">Founder</span></span>
+              </figcaption>
+            </figure>
+            <figure class="tcard panel flex flex-col p-7 sm:p-8">
+              <div class="flex items-center justify-between">
+                <span class="stars" role="img" aria-label="Rated 5 out of 5 stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></span>
+                <i class="ph-fill ph-quotes text-4xl" style="color:rgba(253,255,0,.18)"></i>
+              </div>
+              <blockquote class="mt-5 leading-[1.7] text-white/80">“Allan is a dedicated professional with a clear passion for creating high-performing funnels. His thoughtful approach, kindness, and deep understanding made the process smooth and effective. I highly recommend Allan for any business needing smart, strategic funnel solutions. Thank you, Mr. Allan, for your outstanding work and commitment.”</blockquote>
+              <figcaption class="mt-auto flex items-center gap-4 pt-7">
+                <img src="assets/client-liana.jpg" alt="" loading="lazy" decoding="async" width="48" height="48" class="h-12 w-12 shrink-0 rounded-full object-cover ring-2 ring-white/15" onerror="this.onerror=null;this.src='https://placehold.co/96x96/171717/FDFF00/png?text=CL&font=poppins'" />
+                <span><span class="block font-display font-bold text-white">Coach Liana</span><span class="block text-sm text-white/60">Wellness Coach</span></span>
+              </figcaption>
+            </figure>
+            <!-- PLACEHOLDER QUOTE - replace with Douglas's real words (his photo IS real) -->
+            <figure class="tcard panel flex flex-col p-7 sm:p-8">
+              <div class="flex items-center justify-between">
+                <span class="stars" role="img" aria-label="Rated 5 out of 5 stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></span>
+                <i class="ph-fill ph-quotes text-4xl" style="color:rgba(253,255,0,.18)"></i>
+              </div>
+              <blockquote class="mt-5 leading-[1.7] text-white/80">“Allan rebuilt our entire lead follow-up in GoHighLevel and automated the busywork that used to eat our week. Leads get nurtured on their own now, and nothing slips through the cracks. Easily the best automation specialist we've worked with.”</blockquote>
+              <figcaption class="mt-auto flex items-center gap-4 pt-7">
+                <img src="assets/client-douglas.jpg" alt="" loading="lazy" decoding="async" width="48" height="48" class="h-12 w-12 shrink-0 rounded-full object-cover ring-2 ring-white/15" onerror="this.onerror=null;this.src='https://placehold.co/96x96/171717/FDFF00/png?text=DH&font=poppins'" />
+                <span><span class="block font-display font-bold text-white">Douglas Hart</span><span class="block text-sm text-white/60">Operational Manager</span></span>
+              </figcaption>
+            </figure>
+            <!-- PLACEHOLDER QUOTE - replace with Marie's real words (her photo IS real) -->
+            <figure class="tcard panel flex flex-col p-7 sm:p-8">
+              <div class="flex items-center justify-between">
+                <span class="stars" role="img" aria-label="Rated 5 out of 5 stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></span>
+                <i class="ph-fill ph-quotes text-4xl" style="color:rgba(253,255,0,.18)"></i>
+              </div>
+              <blockquote class="mt-5 leading-[1.7] text-white/80">“Working with Allan was effortless. He mapped our process, connected all of our tools, and built AI workflows that save the team hours every single day. Clear, reliable, and genuinely great at what he does.”</blockquote>
+              <figcaption class="mt-auto flex items-center gap-4 pt-7">
+                <img src="assets/client-marie.jpg" alt="" loading="lazy" decoding="async" width="48" height="48" class="h-12 w-12 shrink-0 rounded-full object-cover ring-2 ring-white/15" onerror="this.onerror=null;this.src='https://placehold.co/96x96/171717/FDFF00/png?text=MN&font=poppins'" />
+                <span><span class="block font-display font-bold text-white">Marie Neugent</span><span class="block text-sm text-white/60">Master Massage Therapist</span></span>
+              </figcaption>
+            </figure>
+            <!-- ===== duplicate set (hidden from assistive tech, drives the seamless loop) ===== -->
+            <figure class="tcard panel flex flex-col p-7 sm:p-8 t-dup" aria-hidden="true">
+              <div class="flex items-center justify-between">
+                <span class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></span>
+                <i class="ph-fill ph-quotes text-4xl" style="color:rgba(253,255,0,.18)"></i>
+              </div>
+              <blockquote class="mt-5 leading-[1.7] text-white/80">“Working with Allan is a miracle. He is a guy of understanding, kind and passionate about his work, and someone I can recommend if you need help building a perfect funnel for your business. Thank you so much, Mr. Allan, for the great work you have done for me.”</blockquote>
+              <figcaption class="mt-auto flex items-center gap-4 pt-7">
+                <img src="assets/client-steve.jpg" alt="" loading="lazy" decoding="async" width="48" height="48" class="h-12 w-12 shrink-0 rounded-full object-cover ring-2 ring-white/15" onerror="this.onerror=null;this.src='https://placehold.co/96x96/171717/FDFF00/png?text=SO&font=poppins'" />
+                <span><span class="block font-display font-bold text-white">Steve Odira</span><span class="block text-sm text-white/60">Business Owner</span></span>
+              </figcaption>
+            </figure>
+            <figure class="tcard panel flex flex-col p-7 sm:p-8 t-dup" aria-hidden="true">
+              <div class="flex items-center justify-between">
+                <span class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></span>
+                <i class="ph-fill ph-quotes text-4xl" style="color:rgba(253,255,0,.18)"></i>
+              </div>
+              <blockquote class="mt-5 leading-[1.7] text-white/80">“Allan was a game changer! He made the entire process smooth and effortless, delivering a high-converting funnel that exceeded my expectations. If you want results without the hassle, don't wait, hire Allan now. It's 100% worth it!”</blockquote>
+              <figcaption class="mt-auto flex items-center gap-4 pt-7">
+                <img src="assets/client-pietro.jpg" alt="" loading="lazy" decoding="async" width="48" height="48" class="h-12 w-12 shrink-0 rounded-full object-cover ring-2 ring-white/15" onerror="this.onerror=null;this.src='https://placehold.co/96x96/171717/FDFF00/png?text=PG&font=poppins'" />
+                <span><span class="block font-display font-bold text-white">Pietro Ginevri</span><span class="block text-sm text-white/60">Founder</span></span>
+              </figcaption>
+            </figure>
+            <figure class="tcard panel flex flex-col p-7 sm:p-8 t-dup" aria-hidden="true">
+              <div class="flex items-center justify-between">
+                <span class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></span>
+                <i class="ph-fill ph-quotes text-4xl" style="color:rgba(253,255,0,.18)"></i>
+              </div>
+              <blockquote class="mt-5 leading-[1.7] text-white/80">“Allan is a dedicated professional with a clear passion for creating high-performing funnels. His thoughtful approach, kindness, and deep understanding made the process smooth and effective. I highly recommend Allan for any business needing smart, strategic funnel solutions. Thank you, Mr. Allan, for your outstanding work and commitment.”</blockquote>
+              <figcaption class="mt-auto flex items-center gap-4 pt-7">
+                <img src="assets/client-liana.jpg" alt="" loading="lazy" decoding="async" width="48" height="48" class="h-12 w-12 shrink-0 rounded-full object-cover ring-2 ring-white/15" onerror="this.onerror=null;this.src='https://placehold.co/96x96/171717/FDFF00/png?text=CL&font=poppins'" />
+                <span><span class="block font-display font-bold text-white">Coach Liana</span><span class="block text-sm text-white/60">Wellness Coach</span></span>
+              </figcaption>
+            </figure>
+            <figure class="tcard panel flex flex-col p-7 sm:p-8 t-dup" aria-hidden="true">
+              <div class="flex items-center justify-between">
+                <span class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></span>
+                <i class="ph-fill ph-quotes text-4xl" style="color:rgba(253,255,0,.18)"></i>
+              </div>
+              <blockquote class="mt-5 leading-[1.7] text-white/80">“Allan rebuilt our entire lead follow-up in GoHighLevel and automated the busywork that used to eat our week. Leads get nurtured on their own now, and nothing slips through the cracks. Easily the best automation specialist we've worked with.”</blockquote>
+              <figcaption class="mt-auto flex items-center gap-4 pt-7">
+                <img src="assets/client-douglas.jpg" alt="" loading="lazy" decoding="async" width="48" height="48" class="h-12 w-12 shrink-0 rounded-full object-cover ring-2 ring-white/15" onerror="this.onerror=null;this.src='https://placehold.co/96x96/171717/FDFF00/png?text=DH&font=poppins'" />
+                <span><span class="block font-display font-bold text-white">Douglas Hart</span><span class="block text-sm text-white/60">Operational Manager</span></span>
+              </figcaption>
+            </figure>
+            <figure class="tcard panel flex flex-col p-7 sm:p-8 t-dup" aria-hidden="true">
+              <div class="flex items-center justify-between">
+                <span class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></span>
+                <i class="ph-fill ph-quotes text-4xl" style="color:rgba(253,255,0,.18)"></i>
+              </div>
+              <blockquote class="mt-5 leading-[1.7] text-white/80">“Working with Allan was effortless. He mapped our process, connected all of our tools, and built AI workflows that save the team hours every single day. Clear, reliable, and genuinely great at what he does.”</blockquote>
+              <figcaption class="mt-auto flex items-center gap-4 pt-7">
+                <img src="assets/client-marie.jpg" alt="" loading="lazy" decoding="async" width="48" height="48" class="h-12 w-12 shrink-0 rounded-full object-cover ring-2 ring-white/15" onerror="this.onerror=null;this.src='https://placehold.co/96x96/171717/FDFF00/png?text=MN&font=poppins'" />
+                <span><span class="block font-display font-bold text-white">Marie Neugent</span><span class="block text-sm text-white/60">Master Massage Therapist</span></span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ROI CALCULATOR ============ -->
+    <section id="roi" aria-labelledby="roi-h" class="relative overflow-hidden border-t border-white/[.06] py-20 md:py-28">
+      <div class="roi-stars" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute inset-0" style="background: radial-gradient(46rem 26rem at 50% 0%, rgba(253,255,0,0.08), transparent 60%);"></div>
+      <div class="shell relative">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="reveal kicker">ROI Calculator</p>
+          <h2 id="roi-h" class="reveal mt-3 font-display text-4xl font-extrabold tracking-[-0.02em] sm:text-5xl" style="--d:.05s">Calculate Your <span class="text-volt">Savings</span></h2>
+          <p class="reveal mx-auto mt-4 max-w-xl text-white/65" style="--d:.1s">Adjust the sliders to see how much time and money automation can save your business.</p>
+        </div>
+
+        <div class="reveal mt-12 grid items-start gap-5 lg:grid-cols-2" style="--d:.14s">
+          <!-- INPUTS -->
+          <div class="panel p-6 sm:p-8">
+            <div>
+              <div class="flex items-center justify-between gap-3">
+                <label for="roi-hours" class="flex items-center gap-2 text-xs font-bold uppercase tracking-[.14em] text-white/55"><i class="ph-bold ph-clock text-sm"></i> Manual hours / week</label>
+                <span id="roi-hours-out" class="font-display text-lg font-bold text-volt">8h</span>
+              </div>
+              <input id="roi-hours" class="roi-range mt-3" type="range" min="1" max="40" step="1" value="8" />
+            </div>
+            <div class="mt-7">
+              <div class="flex items-center justify-between gap-3">
+                <label for="roi-cost" class="flex items-center gap-2 text-xs font-bold uppercase tracking-[.14em] text-white/55"><i class="ph-bold ph-currency-dollar text-sm"></i> Average hourly cost</label>
+                <span id="roi-cost-out" class="font-display text-lg font-bold text-volt">$30</span>
+              </div>
+              <input id="roi-cost" class="roi-range mt-3" type="range" min="5" max="150" step="5" value="30" />
+            </div>
+            <div class="mt-7">
+              <div class="flex items-center justify-between gap-3">
+                <label for="roi-auto" class="flex items-center gap-2 text-xs font-bold uppercase tracking-[.14em] text-white/55"><i class="ph-bold ph-gauge text-sm"></i> Automation level</label>
+                <span class="font-display text-lg font-bold text-volt"><span id="roi-auto-pct">70%</span> <span id="roi-auto-label" class="text-sm font-semibold text-white/50">Standard</span></span>
+              </div>
+              <input id="roi-auto" class="roi-range mt-3" type="range" min="30" max="90" step="5" value="70" />
+            </div>
+            <p class="mt-5 text-xs text-white/55">* Estimates based on typical automation scenarios</p>
+            <div class="roi-disclaimer mt-5 flex gap-3 p-4">
+              <i class="ph-bold ph-warning-circle mt-0.5 shrink-0 text-base" style="color:#FFD700"></i>
+              <p class="text-xs leading-relaxed text-white/55"><b class="text-white/75">Disclaimer:</b> These savings are illustrative ballpark figures based on typical business processes, industry averages, and an assumed automation rate. Actual results vary with your team size, workflow complexity, and implementation quality. This is a general estimate of potential time and cost savings, not a guarantee of specific outcomes.</p>
+            </div>
+          </div>
+
+          <!-- OUTPUTS -->
+          <div class="flex flex-col gap-5">
+            <div class="panel p-6 sm:p-7">
+              <label for="roi-workflow" class="flex items-center gap-2 text-xs font-bold uppercase tracking-[.14em] text-white/55"><i class="ph-fill ph-circle text-volt" style="font-size:.55rem"></i> Select workflow to automate</label>
+              <div class="relative mt-3">
+                <select id="roi-workflow" class="roi-select">
+                  <option data-level="70">Client &amp; post-close retention automation</option>
+                  <option data-level="80">Lead capture &amp; follow-up automation</option>
+                  <option data-level="75">Appointment booking &amp; reminders</option>
+                  <option data-level="70">CRM pipeline &amp; lead nurture</option>
+                  <option data-level="65">AI customer support automation</option>
+                  <option data-level="60">Invoicing &amp; admin automation</option>
+                </select>
+                <i class="ph-bold ph-caret-down pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white/50"></i>
+              </div>
+              <p class="mt-2.5 text-xs text-white/55">Sets a typical automation level for this workflow. Adjust the slider to fine-tune.</p>
+            </div>
+
+            <div class="roi-result flex items-center gap-4 rounded-[1.25rem] p-6" aria-live="polite">
+              <span class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-ink/15"><i class="ph-bold ph-clock-countdown text-2xl"></i></span>
+              <div>
+                <div class="font-display text-4xl font-extrabold leading-none"><span id="roi-saved">6</span>h</div>
+                <div class="mt-1 text-xs font-bold uppercase tracking-[.14em] opacity-70">Saved per week</div>
+              </div>
+            </div>
+
+            <div class="panel p-6 sm:p-7">
+              <p class="flex items-center gap-2 text-xs font-bold uppercase tracking-[.14em] text-white/55"><i class="ph-bold ph-wallet text-sm"></i> Estimated savings</p>
+              <dl class="mt-4" aria-live="polite">
+                <div class="flex items-center justify-between border-b border-white/[.07] py-3"><dt class="text-sm text-white/70">Weekly</dt><dd id="roi-weekly" class="font-display text-lg font-bold text-white">$180</dd></div>
+                <div class="flex items-center justify-between border-b border-white/[.07] py-3"><dt class="text-sm text-white/70">Monthly</dt><dd id="roi-monthly" class="font-display text-lg font-bold text-white">$780</dd></div>
+                <div class="flex items-center justify-between pt-4"><dt class="text-sm font-semibold text-white/80">Annual</dt><dd id="roi-annual" class="font-display text-3xl font-extrabold text-volt">$9,360</dd></div>
+              </dl>
+            </div>
+
+            <a href="#contact" class="btn btn-primary w-full px-6 py-4 text-sm">Start Saving Today <span class="btn-ic"><i class="ph-bold ph-arrow-right"></i></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT / FINAL CTA ============ -->
+    <section id="contact" aria-labelledby="contact-h" class="grain relative border-t border-white/[.06] py-20 md:py-28">
+      <div class="pointer-events-none absolute inset-0" style="background: radial-gradient(40rem 22rem at 50% 0%, rgba(253,255,0,0.07), transparent 60%);"></div>
+      <div class="shell relative z-10">
+        <div class="text-center">
+          <p class="reveal kicker">Ready to Get Started</p>
+          <h2 id="contact-h" class="reveal mx-auto mt-3 max-w-3xl font-display text-4xl font-extrabold tracking-[-0.02em] sm:text-5xl" style="--d:.05s">Let's Build Your <span class="text-volt">Next System</span></h2>
+          <p class="reveal mx-auto mt-4 max-w-2xl text-white/65" style="--d:.1s">Book a free discovery call, no commitment, no pressure. We'll map your process, find the best automation wins, and put together a plan to save you hours each week.</p>
+        </div>
+
+        <div class="mt-14 grid gap-6 lg:grid-cols-12">
+          <!-- Live GHL booking calendar -->
+          <div class="reveal panel p-6 lg:col-span-7" style="--d:.06s">
+            <div class="flex items-center gap-3 border-b border-white/[.07] pb-5">
+              <img src="brand_assets/asb-logo.png" alt="Allan Simbulan Builder" width="44" height="44" class="h-11 w-11 rounded-xl bg-white object-contain p-1" />
+              <div>
+                <p class="text-xs text-white/65">Allan Simbulan</p>
+                <p class="font-display text-lg font-bold text-white">Discovery call with Allan</p>
+              </div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/60">
+              <span class="inline-flex items-center gap-2"><i class="ph-bold ph-clock text-volt"></i> 30 min</span>
+              <span class="inline-flex items-center gap-2"><i class="ph-bold ph-video-camera text-volt"></i> Web conferencing details on confirmation</span>
+              <span class="inline-flex items-center gap-2"><i class="ph-bold ph-globe-hemisphere-east text-volt"></i> Philippine Time (GMT+8)</span>
+            </div>
+            <div class="mt-6 overflow-hidden rounded-2xl border border-white/[.07] bg-coal">
+              <iframe src="https://sites.leadconnectorhq.com/preview/zoqua6oo420JrTUGe5NI"
+                      title="Book a free discovery call with Allan Simbulan"
+                      loading="lazy" scrolling="auto"
+                      id="ghl-booking-calendar"
+                      style="width:100%; border:none; min-height:660px;"></iframe>
+            </div>
+          </div>
+
+          <!-- Direct contact + socials -->
+          <div class="reveal space-y-6 lg:col-span-5" style="--d:.12s">
+            <div class="panel p-7">
+              <h3 class="font-display text-sm font-bold uppercase tracking-wide text-white/65">Direct Contact</h3>
+              <ul class="mt-5 space-y-4">
+                <li>
+                  <a href="https://wa.me/639563221636" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-4">
+                    <span class="ico shrink-0"><i class="ph-fill ph-whatsapp-logo text-xl"></i></span>
+                    <span><span class="block text-xs text-white/65">Phone / WhatsApp</span><span class="block font-semibold text-white group-hover:text-volt">+63 956 322 1636</span></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:allanmapagmahal08@gmail.com" class="group flex items-center gap-4">
+                    <span class="ico shrink-0"><i class="ph-fill ph-envelope-simple text-xl"></i></span>
+                    <span><span class="block text-xs text-white/65">Email</span><span class="block font-semibold text-white group-hover:text-volt">allanmapagmahal08@gmail.com</span></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="panel p-7">
+              <h3 class="font-display text-sm font-bold uppercase tracking-wide text-white/65">Find Me On</h3>
+              <ul class="mt-5 space-y-4">
+                <li>
+                  <a href="https://www.linkedin.com/in/allan-simbulan" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-4">
+                    <span class="ico shrink-0"><i class="ph-fill ph-linkedin-logo text-xl"></i></span>
+                    <span><span class="block text-xs text-white/65">Professional network</span><span class="block font-semibold text-white group-hover:text-volt">LinkedIn</span></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.upwork.com/freelancers/~015f7155315e8efabe?mp_source=share" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-4">
+                    <span class="ico shrink-0"><i class="ph-bold ph-briefcase text-xl"></i></span>
+                    <span><span class="block text-xs text-white/65">Freelance platform</span><span class="block font-semibold text-white group-hover:text-volt">Upwork</span></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.onlinejobs.ph/jobseekers/info/2595262" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-4">
+                    <span class="ico shrink-0"><i class="ph-bold ph-identification-badge text-xl"></i></span>
+                    <span><span class="block text-xs text-white/65">Jobseeker profile</span><span class="block font-semibold text-white group-hover:text-volt">OnlineJobs.ph</span></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="grain relative border-t border-white/[.06] bg-coal pt-14 pb-10">
+      <div class="shell relative z-10">
+        <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+          <div class="flex items-center gap-3">
+            <img src="brand_assets/asb-logo.png" alt="Allan Simbulan Builder" width="40" height="40" class="h-10 w-auto rounded-xl bg-white px-1.5 py-0.5" />
+            <span class="font-display text-lg font-extrabold tracking-tight text-white">ALLAN SIMBULAN <span class="text-volt">BUILDER</span></span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <a href="https://www.facebook.com/allansimbulanbuilder01" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-white/70 transition-colors hover:border-volt/40 hover:text-volt"><i class="ph-fill ph-facebook-logo text-lg"></i></a>
+            <a href="https://www.instagram.com/allansimbulanbuilder01/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-white/70 transition-colors hover:border-volt/40 hover:text-volt"><i class="ph-fill ph-instagram-logo text-lg"></i></a>
+            <a href="https://www.tiktok.com/@allansimbulanbuilder" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-white/70 transition-colors hover:border-volt/40 hover:text-volt"><i class="ph-fill ph-tiktok-logo text-lg"></i></a>
+            <a href="https://www.linkedin.com/in/allan-simbulan/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-white/70 transition-colors hover:border-volt/40 hover:text-volt"><i class="ph-fill ph-linkedin-logo text-lg"></i></a>
+            <a href="https://wa.me/639563221636" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-white/70 transition-colors hover:border-volt/40 hover:text-volt"><i class="ph-fill ph-whatsapp-logo text-lg"></i></a>
+          </div>
+        </div>
+        <div class="mt-10 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-7 text-sm text-white/65 sm:flex-row">
+          <p>&copy; <span id="year">2026</span> Allan Simbulan Builder. All rights reserved.</p>
+          <p>AI Automation &amp; GoHighLevel Specialist &middot; Manila, Philippines</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Certificate lightbox -->
+  <div id="cert-modal" class="fixed inset-0 z-[90] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title">
+    <div id="cert-backdrop" class="absolute inset-0 bg-ink/85 backdrop-blur-sm"></div>
+    <div class="relative z-10 w-full max-w-3xl">
+      <button id="cert-close" type="button" class="absolute -right-2 -top-2 z-20 grid h-10 w-10 place-items-center rounded-full bg-volt text-ink shadow-[0_10px_30px_-8px_rgba(253,255,0,.7)] transition-transform hover:scale-105" aria-label="Close certificate">
+        <i class="ph-bold ph-x text-lg"></i>
+      </button>
+      <div class="overflow-hidden rounded-2xl border border-white/12 bg-white shadow-[0_40px_90px_-30px_rgba(0,0,0,.9)]">
+        <img id="cert-modal-img" src="" alt="" class="block max-h-[80vh] w-full object-contain" />
+      </div>
+      <div class="mt-4 text-center">
+        <p id="cert-modal-title" class="font-display text-lg font-bold text-white"></p>
+        <p id="cert-modal-meta" class="mt-1 text-sm text-white/65"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project case-study modal -->
+  <div id="sample-modal" class="fixed inset-0 z-[90] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="sample-modal-title">
+    <div id="sample-backdrop" class="absolute inset-0 bg-ink/85 backdrop-blur-sm"></div>
+    <div class="relative z-10 w-full max-w-2xl">
+      <button id="sample-close" type="button" class="absolute -right-2 -top-2 z-20 grid h-10 w-10 place-items-center rounded-full bg-volt text-ink shadow-[0_10px_30px_-8px_rgba(253,255,0,.7)] transition-transform hover:scale-105" aria-label="Close case study">
+        <i class="ph-bold ph-x text-lg"></i>
+      </button>
+      <div id="sample-modal-panel" class="panel flex max-h-[88vh] flex-col overflow-hidden">
+        <div class="overflow-y-auto px-6 py-7 sm:px-8 sm:py-8">
+          <p class="font-display text-[11px] font-bold uppercase tracking-[.2em] text-volt">Case study</p>
+          <h3 id="sample-modal-title" class="mt-1.5 font-display text-2xl font-bold tracking-[-0.02em] text-white"></h3>
+          <div id="sample-modal-body" class="mt-5"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+
+      // Starfield background (inspired by a reference portfolio): twinkling, drifting stars + a cursor constellation, plus a glow that follows the mouse
+      (function () {
+        var cv = document.getElementById('ai-bg'), glow = document.getElementById('cursor-glow');
+        if (!cv || reduce) { if (cv) cv.style.display = 'none'; if (glow) glow.style.display = 'none'; return; }
+        var ctx = cv.getContext('2d'), DPR = Math.min(window.devicePixelRatio || 1, 2), W, H, stars = [], shooters = [], raf;
+        var mouse = { x: -9999, y: -9999, on: false };
+        var gx = innerWidth / 2, gy = innerHeight / 2, tx = gx, ty = gy;
+        function build() {
+          W = cv.width = Math.floor(innerWidth * DPR); H = cv.height = Math.floor(innerHeight * DPR);
+          cv.style.width = innerWidth + 'px'; cv.style.height = innerHeight + 'px';
+          var count = Math.max(70, Math.min(190, Math.round(innerWidth * innerHeight / 8200)));
+          stars = [];
+          for (var i = 0; i < count; i++) stars.push({
+            x: Math.random() * W, y: Math.random() * H, r: (1 + Math.random() * 1.7) * DPR, a: .55 + Math.random() * .45,
+            tw: Math.random() * 6.283, tws: .008 + Math.random() * .03, vx: (Math.random() - .5) * .05 * DPR, vy: (Math.random() - .5) * .05 * DPR, gold: Math.random() < .22
+          });
+          shooters = [];
+        }
+        function frame() {
+          ctx.clearRect(0, 0, W, H);
+          var light = document.documentElement.getAttribute('data-theme') === 'light';
+          var white = light ? '138,101,0' : '255,255,255', gold = light ? '138,101,0' : '255,215,0', lineRgb = light ? '138,101,0' : '253,255,0';
+          var mR = 150 * DPR, mR2 = mR * mR, i, s;
+          if (mouse.on) {
+            ctx.lineWidth = DPR;
+            for (i = 0; i < stars.length; i++) {
+              var ex = stars[i].x - mouse.x, ey = stars[i].y - mouse.y, e2 = ex * ex + ey * ey;
+              if (e2 < mR2) { ctx.strokeStyle = 'rgba(' + lineRgb + ',' + ((1 - e2 / mR2) * .45).toFixed(3) + ')'; ctx.beginPath(); ctx.moveTo(stars[i].x, stars[i].y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke(); }
+            }
+          }
+          for (i = 0; i < stars.length; i++) {
+            s = stars[i]; s.x += s.vx; s.y += s.vy;
+            if (s.x < 0) s.x = W; else if (s.x > W) s.x = 0;
+            if (s.y < 0) s.y = H; else if (s.y > H) s.y = 0;
+            s.tw += s.tws;
+            ctx.fillStyle = 'rgba(' + (s.gold ? gold : white) + ',' + (s.a * (.72 + .28 * Math.sin(s.tw))).toFixed(3) + ')';
+            ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, 6.2832); ctx.fill();
+          }
+          if (shooters.length < 2 && Math.random() < .006) {
+            var ang = Math.PI * (.18 + Math.random() * .14);
+            shooters.push({ x: Math.random() * W, y: Math.random() * H * .5, vx: Math.cos(ang) * 7 * DPR, vy: Math.sin(ang) * 7 * DPR, life: 1 });
+          }
+          for (i = shooters.length - 1; i >= 0; i--) {
+            var sh = shooters[i]; sh.x += sh.vx; sh.y += sh.vy; sh.life -= .012;
+            if (sh.life <= 0 || sh.x > W || sh.y > H) { shooters.splice(i, 1); continue; }
+            var tlx = sh.x - sh.vx * 6, tly = sh.y - sh.vy * 6, grad = ctx.createLinearGradient(sh.x, sh.y, tlx, tly);
+            grad.addColorStop(0, 'rgba(' + white + ',' + (sh.life * .9).toFixed(3) + ')'); grad.addColorStop(1, 'rgba(' + white + ',0)');
+            ctx.strokeStyle = grad; ctx.lineWidth = 1.6 * DPR; ctx.beginPath(); ctx.moveTo(sh.x, sh.y); ctx.lineTo(tlx, tly); ctx.stroke();
+          }
+          raf = requestAnimationFrame(frame);
+        }
+        build(); frame();
+        window.addEventListener('mousemove', function (e) { mouse.x = e.clientX * DPR; mouse.y = e.clientY * DPR; mouse.on = true; tx = e.clientX; ty = e.clientY; if (glow) glow.classList.add('on'); }, { passive: true });
+        window.addEventListener('mouseout', function (e) { if (!e.relatedTarget) { mouse.on = false; if (glow) glow.classList.remove('on'); } });
+        if (glow) (function gl() { gx += (tx - gx) * .15; gy += (ty - gy) * .15; glow.style.transform = 'translate3d(' + gx + 'px,' + gy + 'px,0)'; requestAnimationFrame(gl); })();
+        var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(build, 200); }, { passive: true });
+        document.addEventListener('visibilitychange', function () { cancelAnimationFrame(raf); if (!document.hidden) raf = requestAnimationFrame(frame); });
+      })();
+
+      // custom dot + ring cursor (dot tracks exactly, ring trails + grows on hover) — copied style from a reference site
+      (function () {
+        var dot = document.getElementById('cc-dot'), ring = document.getElementById('cc-ring');
+        if (!dot || !ring || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+        document.documentElement.classList.add('cc');
+        var dx = innerWidth / 2, dy = innerHeight / 2, rx = dx, ry = dy, lerp = reduce ? 1 : 0.2, shown = false;
+        window.addEventListener('mousemove', function (e) {
+          dx = e.clientX; dy = e.clientY;
+          dot.style.transform = 'translate(' + dx + 'px,' + dy + 'px)';
+          if (!shown) { shown = true; dot.style.opacity = ring.style.opacity = '1'; }
+        }, { passive: true });
+        (function loop () { rx += (dx - rx) * lerp; ry += (dy - ry) * lerp; ring.style.transform = 'translate(' + rx + 'px,' + ry + 'px)'; requestAnimationFrame(loop); })();
+        var hov = 'a, button, [role="button"], input, select, textarea, label, summary, .seg, [data-cert], [data-sample], [data-theme-toggle]';
+        document.addEventListener('mouseover', function (e) { if (e.target.closest && e.target.closest(hov)) ring.classList.add('cc-hover'); });
+        document.addEventListener('mouseout', function (e) { if (e.target.closest && e.target.closest(hov)) ring.classList.remove('cc-hover'); });
+        document.addEventListener('mouseleave', function () { dot.style.opacity = ring.style.opacity = '0'; });
+        document.addEventListener('mouseenter', function () { dot.style.opacity = ring.style.opacity = '1'; });
+      })();
+
+      // hide purely decorative icon glyphs from assistive tech (labels/aria-labels carry meaning)
+      document.querySelectorAll('i[class*="ph-"]').forEach(function (ic) { ic.setAttribute('aria-hidden', 'true'); });
+
+      // mobile menu
+      var btn = document.getElementById('menu-btn'); var menu = document.getElementById('mobile-menu');
+      if (btn && menu) {
+        btn.addEventListener('click', function () {
+          var open = menu.classList.toggle('hidden') === false;
+          btn.setAttribute('aria-expanded', String(open));
+          btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+          btn.innerHTML = open ? '<i class="ph-bold ph-x text-xl"></i>' : '<i class="ph-bold ph-list text-xl"></i>';
+        });
+        menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { menu.classList.add('hidden'); btn.setAttribute('aria-expanded','false'); btn.setAttribute('aria-label','Open menu'); btn.innerHTML='<i class="ph-bold ph-list text-xl"></i>'; }); });
+      }
+
+      // scroll reveals
+      var reveals = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window) || reduce) { reveals.forEach(function (el) { el.classList.add('is-visible'); }); }
+      else {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        reveals.forEach(function (el) { io.observe(el); });
+      }
+
+      // cursor-following gold spotlight on hover cards (feeds --mx/--my; CSS paints the glow)
+      if (!reduce && window.matchMedia('(hover: hover)').matches) {
+        document.querySelectorAll('.panel-hover').forEach(function (card) {
+          card.addEventListener('pointermove', function (e) {
+            var r = card.getBoundingClientRect();
+            card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%');
+            card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%');
+          });
+        });
+      }
+
+      // scrollspy
+      var navlinks = document.querySelectorAll('.navlink');
+      if ('IntersectionObserver' in window && navlinks.length) {
+        var byId = {};
+        navlinks.forEach(function (a) { var h = a.getAttribute('href') || ''; if (h.charAt(0) === '#') byId[h.slice(1)] = a; });
+        var spy = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              navlinks.forEach(function (a) { a.classList.remove('is-active'); });
+              if (byId[e.target.id]) byId[e.target.id].classList.add('is-active');
+            }
+          });
+        }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+        Object.keys(byId).forEach(function (id) { var s = document.getElementById(id); if (s) spy.observe(s); });
+      }
+
+      // project platform filter — exactly one platform is active at all times (no "all" view).
+      // A card tagged with multiple platforms (data-plat="zapier ghl") shows under each of them.
+      var segs = document.querySelectorAll('#filters .seg');
+      var grid = document.getElementById('project-grid');
+      var cards = document.querySelectorAll('#project-grid [data-plat]');
+      var empty = document.getElementById('filter-empty');
+      var DEFAULT_PLAT = 'ghl';
+      var applyFilter = function (f) {
+        segs.forEach(function (x) {
+          var on = x.getAttribute('data-filter') === f;
+          x.classList.toggle('active', on);
+          x.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+        var shown = 0;
+        cards.forEach(function (c) {
+          var plats = (c.getAttribute('data-plat') || '').split(/\s+/);
+          var ok = plats.indexOf(f) !== -1;
+          c.style.display = ok ? '' : 'none';
+          if (ok) { shown++; c.classList.add('is-visible'); } // guarantee revealed once shown
+        });
+        if (grid) { // keep each filter balanced: 1 card centered, 2 centered, 3 in a row
+          grid.classList.toggle('one', shown === 1);
+          grid.classList.toggle('two', shown === 2);
+        }
+        if (empty) empty.classList.toggle('hidden', shown !== 0);
+      };
+      segs.forEach(function (s) {
+        s.addEventListener('click', function () { applyFilter(s.getAttribute('data-filter')); });
+      });
+      applyFilter(DEFAULT_PLAT);
+
+      // ROI savings calculator
+      var roi = document.getElementById('roi');
+      if (roi) {
+        var rHours = document.getElementById('roi-hours');
+        var rCost = document.getElementById('roi-cost');
+        var rAuto = document.getElementById('roi-auto');
+        var rWorkflow = document.getElementById('roi-workflow');
+        var oHours = document.getElementById('roi-hours-out');
+        var oCost = document.getElementById('roi-cost-out');
+        var oAutoPct = document.getElementById('roi-auto-pct');
+        var oAutoLabel = document.getElementById('roi-auto-label');
+        var oSaved = document.getElementById('roi-saved');
+        var oWeekly = document.getElementById('roi-weekly');
+        var oMonthly = document.getElementById('roi-monthly');
+        var oAnnual = document.getElementById('roi-annual');
+        var money = function (n) { return '$' + Math.round(n).toLocaleString('en-US'); };
+        var setFill = function (el) {
+          var min = +el.min, max = +el.max, v = +el.value;
+          el.style.setProperty('--p', (max > min ? (v - min) / (max - min) * 100 : 0) + '%');
+        };
+        var autoWord = function (p) { return p < 50 ? 'Light' : p < 70 ? 'Moderate' : p < 85 ? 'Standard' : 'Aggressive'; };
+        var calc = function () {
+          var hours = +rHours.value, cost = +rCost.value, auto = +rAuto.value;
+          [rHours, rCost, rAuto].forEach(setFill);
+          oHours.textContent = hours + 'h';
+          oCost.textContent = '$' + cost;
+          oAutoPct.textContent = auto + '%';
+          oAutoLabel.textContent = autoWord(auto);
+          rHours.setAttribute('aria-valuetext', hours + ' hours per week');
+          rCost.setAttribute('aria-valuetext', '$' + cost + ' per hour');
+          rAuto.setAttribute('aria-valuetext', auto + ' percent, ' + autoWord(auto));
+          var saved = Math.round(hours * auto / 100);
+          var weekly = saved * cost;
+          oSaved.textContent = saved;
+          oWeekly.textContent = money(weekly);
+          oMonthly.textContent = money(weekly * 52 / 12);
+          oAnnual.textContent = money(weekly * 52);
+        };
+        [rHours, rCost, rAuto].forEach(function (el) { el.addEventListener('input', calc); });
+        if (rWorkflow) rWorkflow.addEventListener('change', function () {
+          var opt = rWorkflow.options[rWorkflow.selectedIndex];
+          var lvl = opt && opt.getAttribute('data-level');
+          if (lvl) rAuto.value = lvl;
+          calc();
+        });
+        calc();
+      }
+
+      // scroll progress hairline
+      var bar = document.getElementById('progress');
+      if (bar) {
+        var setProg = function () {
+          var de = document.documentElement;
+          var max = de.scrollHeight - de.clientHeight;
+          var p = max > 0 ? (window.scrollY || de.scrollTop) / max : 0;
+          bar.style.width = (Math.min(1, Math.max(0, p)) * 100) + '%';
+        };
+        window.addEventListener('scroll', setProg, { passive: true });
+        window.addEventListener('resize', setProg, { passive: true });
+        setProg();
+      }
+
+      // certificate lightbox — click a cert to view it full-size with a caption
+      var cmodal = document.getElementById('cert-modal');
+      if (cmodal) {
+        var cimg = document.getElementById('cert-modal-img');
+        var ctitle = document.getElementById('cert-modal-title');
+        var cmeta = document.getElementById('cert-modal-meta');
+        var cclose = document.getElementById('cert-close');
+        var cback = document.getElementById('cert-backdrop');
+        var clast = null;
+        // hide the rest of the page from AT + keyboard while the dialog is open
+        var bgEls = [document.getElementById('nav'), document.getElementById('main'), document.getElementById('wa-float'), document.querySelector('.gtranslate_wrapper')];
+        var setBgInert = function (on) {
+          bgEls.forEach(function (el) {
+            if (!el) return;
+            if (on) { el.setAttribute('inert', ''); el.setAttribute('aria-hidden', 'true'); }
+            else { el.removeAttribute('inert'); el.removeAttribute('aria-hidden'); }
+          });
+        };
+        var openCert = function (btn) {
+          clast = btn;
+          cimg.onerror = function () { this.onerror = null; window.certFallback(this); };
+          cimg.src = btn.getAttribute('data-img');
+          cimg.alt = btn.getAttribute('data-title');
+          ctitle.textContent = btn.getAttribute('data-title');
+          cmeta.textContent = btn.getAttribute('data-meta');
+          cmodal.classList.remove('hidden'); cmodal.classList.add('flex');
+          document.body.style.overflow = 'hidden';
+          setBgInert(true);
+          cclose.focus();
+        };
+        var closeCert = function () {
+          cmodal.classList.add('hidden'); cmodal.classList.remove('flex');
+          document.body.style.overflow = '';
+          setBgInert(false);
+          cimg.onerror = null;
+          cimg.removeAttribute('src');
+          if (clast) { clast.focus(); }
+        };
+        document.querySelectorAll('[data-cert]').forEach(function (b) { b.addEventListener('click', function () { openCert(b); }); });
+        cclose.addEventListener('click', closeCert);
+        cback.addEventListener('click', closeCert);
+        document.addEventListener('keydown', function (e) {
+          if (cmodal.classList.contains('hidden')) return;
+          if (e.key === 'Escape') { closeCert(); }
+          else if (e.key === 'Tab') { e.preventDefault(); cclose.focus(); } // trap focus on the only control
+        });
+      }
+
+      // project case-study modal — inject the clicked card's <template> detail
+      var smodal = document.getElementById('sample-modal');
+      if (smodal) {
+        var sTitle = document.getElementById('sample-modal-title');
+        var sBody = document.getElementById('sample-modal-body');
+        var sScroll = sBody.parentNode; // the overflow-y-auto container
+        var sClose = document.getElementById('sample-close');
+        var sBack = document.getElementById('sample-backdrop');
+        var sLast = null;
+        var sBgEls = [document.getElementById('nav'), document.getElementById('main'), document.getElementById('wa-float'), document.querySelector('.gtranslate_wrapper')];
+        var setSBg = function (on) {
+          sBgEls.forEach(function (el) {
+            if (!el) return;
+            if (on) { el.setAttribute('inert', ''); el.setAttribute('aria-hidden', 'true'); }
+            else { el.removeAttribute('inert'); el.removeAttribute('aria-hidden'); }
+          });
+        };
+        var openSample = function (btn) {
+          sLast = btn;
+          var art = btn.closest('article');
+          var tpl = art ? art.querySelector('template.sample-detail') : null;
+          var h = art ? art.querySelector('h3') : null;
+          sTitle.textContent = btn.getAttribute('data-title') || (h ? h.textContent : '');
+          sBody.innerHTML = tpl ? tpl.innerHTML : '';
+          smodal.classList.remove('hidden'); smodal.classList.add('flex');
+          document.body.style.overflow = 'hidden';
+          setSBg(true);
+          if (sScroll) sScroll.scrollTop = 0;
+          sClose.focus();
+        };
+        var closeSample = function () {
+          smodal.classList.add('hidden'); smodal.classList.remove('flex');
+          document.body.style.overflow = '';
+          setSBg(false);
+          sBody.innerHTML = '';
+          if (sLast) { sLast.focus(); }
+        };
+        document.querySelectorAll('[data-sample]').forEach(function (b) { b.addEventListener('click', function () { openSample(b); }); });
+        sClose.addEventListener('click', closeSample);
+        sBack.addEventListener('click', closeSample);
+        document.addEventListener('keydown', function (e) {
+          if (smodal.classList.contains('hidden')) return;
+          if (e.key === 'Escape') { closeSample(); return; }
+          if (e.key !== 'Tab') return;
+          // cycle focus within the dialog (templates may inject links/buttons later)
+          var nodes = [sClose].concat([].slice.call(sBody.querySelectorAll('a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])')));
+          var f = nodes.filter(function (el) { return el && !el.disabled && el.offsetParent !== null; });
+          if (f.length <= 1) { e.preventDefault(); sClose.focus(); return; }
+          var i = f.indexOf(document.activeElement);
+          if (e.shiftKey) { if (i <= 0) { e.preventDefault(); f[f.length - 1].focus(); } }
+          else if (i === f.length - 1 || i === -1) { e.preventDefault(); f[0].focus(); }
+        });
+      }
+
+      // photo role badges: springy pop + gold glow on click
+      document.querySelectorAll('.pbadge').forEach(function (b) {
+        b.addEventListener('click', function () {
+          b.classList.remove('pop');
+          void b.offsetWidth; // restart the animation if clicked rapidly
+          b.classList.add('pop');
+        });
+        b.addEventListener('animationend', function (e) { if (e.animationName === 'badge-pop') { b.classList.remove('pop'); } });
+      });
+
+      // dark / light theme toggle (persisted)
+      var root = document.documentElement;
+      var tcMeta = document.getElementById('theme-color-meta');
+      var setThemeUI = function () {
+        var light = root.getAttribute('data-theme') === 'light';
+        if (tcMeta) tcMeta.setAttribute('content', light ? '#F4F2EC' : '#0A0A0A');
+        document.querySelectorAll('[data-theme-toggle]').forEach(function (b) {
+          b.setAttribute('aria-label', light ? 'Switch to dark mode' : 'Switch to light mode');
+          b.setAttribute('aria-pressed', String(light));
+          var ic = b.querySelector('i');
+          if (ic) ic.className = light ? 'ph-bold ph-moon text-lg' : 'ph-bold ph-sun text-lg';
+        });
+      };
+      document.querySelectorAll('[data-theme-toggle]').forEach(function (b) {
+        b.addEventListener('click', function () {
+          var light = root.getAttribute('data-theme') === 'light';
+          if (light) { root.removeAttribute('data-theme'); } else { root.setAttribute('data-theme', 'light'); }
+          try { localStorage.setItem('asb-theme', light ? 'dark' : 'light'); } catch (e) {}
+          setThemeUI();
+        });
+      });
+      setThemeUI();
+    })();
+  </script>
+
+  <!-- GTranslate language widget (floats bottom-left) -->
+  <div class="gtranslate_wrapper"></div>
+  <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"languages":["en","tl","es","zh-CN","hi","ar","pt","fr","de","ja","ko","ru","id","it","vi"],"wrapper_selector":".gtranslate_wrapper","flag_style":"3d","alt_flags":{"en":"usa"}}</script>
+  <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+  <!-- GoHighLevel calendar embed helper: auto-resizes the booking iframe to fit its content -->
+  <script src="https://link.msgsndr.com/js/form_embed.js" defer></script>
+</body>
+</html>

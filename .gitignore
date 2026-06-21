@@ -1,0 +1,31 @@
+# dependencies & local dev tooling (not needed for the static deploy)
+node_modules/
+package.json
+package-lock.json
+serve.mjs
+screenshot.mjs
+detail-shot.mjs
+el-shot.mjs
+
+# internal docs & agent config — never publish
+CLAUDE.md
+DESIGN.md
+PRODUCT.md
+skills-lock.json
+.claude/
+.agents/
+archive/
+temporary screenshots/
+
+# superseded / draft pages — the portfolio (ai-automation.html) is the homepage
+index.html
+portfolio.html
+
+# internal-only assets
+assets/_ghl3_tmp
+assets/README.txt
+brand_assets/brand-guidelines.png
+
+# OS cruft
+.DS_Store
+Thumbs.db
