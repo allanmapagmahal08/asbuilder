@@ -6,6 +6,8 @@
   <script>
     /* apply saved/system theme before paint to avoid a flash */
     (function () { try { if (localStorage.getItem('asb-theme') === 'light') { document.documentElement.setAttribute('data-theme', 'light'); } } catch (e) {} })();
+    /* duplicate-only sections: reveal ONLY on the asbuilder2 copy (and on localhost for preview); hidden on the main site */
+    (function () { try { var h = location.hostname; if (/asbuilder2/.test(h) || /^(localhost|127\.0\.0\.1)$/.test(h)) { document.documentElement.classList.add('show-dupe'); } } catch (e) {} })();
   </script>
   <title>Allan Simbulan Builder | AI Automation &amp; GoHighLevel Specialist</title>
   <meta name="description" content="Allan Simbulan builds intelligent automations and AI-powered workflows with n8n, Make, Zapier, and GoHighLevel, eliminating repetitive tasks so you can focus on what actually matters." />
@@ -439,6 +441,26 @@
     html[data-theme="light"] .roi-select { color:#14130F; background:#fff; border-color:#E0DDD2; }
     html[data-theme="light"] .roi-select option { background:#fff; color:#14130F; }
     html[data-theme="light"] .roi-disclaimer { border-color:rgba(138,101,0,.3); background:rgba(255,215,0,.1); }
+
+    /* ===== duplicate-only sections (rendered, but shown ONLY on asbuilder2 / localhost) ===== */
+    .dupe-only { display:none; }
+    html.show-dupe .dupe-only { display:block; }
+
+    /* website-samples carousel (cert-card styling, horizontal scroll) */
+    #ws-track { scrollbar-width:none; -ms-overflow-style:none; scroll-behavior:smooth; }
+    #ws-track::-webkit-scrollbar { display:none; }
+    .ws-card { flex:0 0 auto; width:17.5rem; }
+    @media (min-width:640px){ .ws-card { width:19.5rem; } }
+    .ws-nav { display:grid; place-items:center; width:2.75rem; height:2.75rem; border-radius:9999px; color:#F4F4F0;
+      background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.12);
+      transition: background-color .2s ease, border-color .2s ease, transform .2s ease, opacity .2s ease; }
+    .ws-nav:hover { border-color:rgba(253,255,0,.5); background:rgba(253,255,0,.08); }
+    .ws-nav:active { transform:scale(.94); }
+    .ws-nav:disabled { opacity:.3; pointer-events:none; }
+    html[data-theme="light"] .ws-nav { background:#fff; border-color:#E0DDD2; color:#14130F; }
+    html[data-theme="light"] .ws-nav:hover { border-color:#8A6500; background:rgba(253,255,0,.12); }
+    /* full-page sample lightbox: tall screenshots scroll vertically inside the frame */
+    #sample-img-modal .si-scroll { max-height:85vh; overflow-y:auto; }
   </style>
   <noscript><style>.reveal{opacity:1 !important;transform:none !important;filter:none !important}</style></noscript>
 </head>
@@ -1024,6 +1046,25 @@
       </div>
     </section>
 
+    <!-- ============ WEBSITE SAMPLES (asbuilder2 duplicate only) ============ -->
+    <section id="websamples" aria-labelledby="websamples-h" class="dupe-only border-t border-white/[.06] py-20 md:py-28">
+      <div class="shell">
+        <p class="reveal kicker">Website Samples</p>
+        <h2 id="websamples-h" class="reveal mt-3 font-display text-4xl font-extrabold tracking-[-0.02em] sm:text-5xl" style="--d:.05s">Websites &amp; <span class="text-volt">Funnels I Built</span></h2>
+        <p class="reveal mt-4 max-w-2xl text-white/65" style="--d:.1s">Live pages and lead-generation funnels I designed and built in GoHighLevel for a mortgage team. Tap any sample to view the full page.</p>
+        <div class="reveal mt-9" style="--d:.14s">
+          <div class="mb-4 flex items-center justify-between gap-4">
+            <span class="text-xs font-semibold uppercase tracking-[.14em] text-white/40">Swipe to browse</span>
+            <div class="flex items-center gap-2.5">
+              <button id="ws-prev" type="button" class="ws-nav" aria-label="Previous samples"><i class="ph-bold ph-arrow-left text-lg"></i></button>
+              <button id="ws-next" type="button" class="ws-nav" aria-label="More samples"><i class="ph-bold ph-arrow-right text-lg"></i></button>
+            </div>
+          </div>
+          <div id="ws-track" class="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4" role="list" aria-label="Website samples"></div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ CERTIFICATIONS ============ -->
     <section id="certifications" aria-labelledby="certifications-h" class="border-t border-white/[.06] py-20 md:py-28">
       <div class="shell">
@@ -1441,6 +1482,18 @@
     </footer>
   </main>
 
+  <!-- Website-sample full-page lightbox (asbuilder2) -->
+  <div id="sample-img-modal" class="fixed inset-0 z-[90] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="sample-img-cap">
+    <div id="sample-img-backdrop" class="absolute inset-0 bg-ink/85 backdrop-blur-sm"></div>
+    <div class="relative z-10 w-full max-w-3xl">
+      <button id="sample-img-close" type="button" class="absolute -right-2 -top-2 z-20 grid h-10 w-10 place-items-center rounded-full bg-volt text-ink shadow-[0_10px_30px_-8px_rgba(253,255,0,.7)] transition-transform hover:scale-105" aria-label="Close preview"><i class="ph-bold ph-x text-lg"></i></button>
+      <div class="si-scroll overflow-hidden rounded-2xl border border-white/12 bg-white shadow-[0_40px_90px_-30px_rgba(0,0,0,.9)]">
+        <img id="sample-img" src="" alt="" class="block h-auto w-full" />
+      </div>
+      <p id="sample-img-cap" class="mt-3 text-center text-sm font-semibold text-white"></p>
+    </div>
+  </div>
+
   <!-- Certificate lightbox -->
   <div id="cert-modal" class="fixed inset-0 z-[90] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title">
     <div id="cert-backdrop" class="absolute inset-0 bg-ink/85 backdrop-blur-sm"></div>
@@ -1479,6 +1532,77 @@
     (function () {
       var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+
+      // Website samples carousel + full-page lightbox (asbuilder2 duplicate only)
+      (function () {
+        var track = document.getElementById('ws-track');
+        if (!track) return;
+        var SAMPLES = [
+          ['assets/samples/sample-01.png', 'Loan Application Form', 'GoHighLevel funnel'],
+          ['assets/samples/sample-02.png', 'Home Insurance Quote', 'GoHighLevel form'],
+          ['assets/samples/sample-03.png', 'Home Value Estimate', 'GoHighLevel tool'],
+          ['assets/samples/sample-04.png', 'Refinance Rate Checker', 'GoHighLevel funnel'],
+          ['assets/samples/sample-05.png', 'Refinance Analysis', 'GoHighLevel form'],
+          ['assets/samples/sample-06.png', 'Multi-Step Loan Application', 'GoHighLevel funnel'],
+          ['assets/samples/sample-07.jpg', 'Client Testimonials Page', 'GoHighLevel page'],
+          ['assets/samples/sample-08.jpg', 'Home Purchase Landing Page', 'GoHighLevel landing page'],
+          ['assets/samples/sample-09.jpg', 'Refinance Landing Page', 'GoHighLevel landing page'],
+          ['assets/samples/sample-10.jpg', 'Meet the Team Page', 'GoHighLevel page'],
+          ['assets/samples/sample-11.jpg', 'Contact &amp; Scheduling', 'GoHighLevel page'],
+          ['assets/samples/sample-12.jpg', 'Homepage / Hero', 'GoHighLevel website']
+        ];
+        var html = '';
+        for (var i = 0; i < SAMPLES.length; i++) {
+          var s = SAMPLES[i];
+          html += '<article class="ws-card snap-start panel panel-hover flex flex-col overflow-hidden" role="listitem">'
+            + '<button type="button" class="ws-open group relative block aspect-[1.414/1] w-full overflow-hidden bg-[#f6f6f8]" data-img="' + s[0] + '" data-cap="' + s[1] + '" aria-label="View full page: ' + s[1] + '">'
+            + '<img src="' + s[0] + '" alt="' + s[1] + ', a page built in GoHighLevel" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]" onerror="this.style.opacity=0" />'
+            + '<span class="pointer-events-none absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-volt px-3 py-1.5 text-xs font-bold text-ink shadow-[0_8px_22px_-6px_rgba(253,255,0,.7)] transition-colors group-hover:bg-gold">View page <i class="ph-bold ph-arrows-out"></i></span>'
+            + '</button>'
+            + '<div class="p-4"><h3 class="font-display text-sm font-bold text-white">' + s[1] + '</h3><p class="mt-1 text-xs text-white/55">' + s[2] + '</p></div>'
+            + '</article>';
+        }
+        track.innerHTML = html;
+
+        var prev = document.getElementById('ws-prev'), next = document.getElementById('ws-next');
+        function step() { var c = track.querySelector('.ws-card'); return c ? (c.getBoundingClientRect().width + 20) : 320; }
+        function updateNav() {
+          if (!prev || !next) return;
+          prev.disabled = track.scrollLeft <= 4;
+          next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+        }
+        if (prev) prev.addEventListener('click', function () { track.scrollBy({ left: -step() * 1.5, behavior: 'smooth' }); });
+        if (next) next.addEventListener('click', function () { track.scrollBy({ left: step() * 1.5, behavior: 'smooth' }); });
+        track.addEventListener('scroll', updateNav, { passive: true });
+        window.addEventListener('resize', updateNav, { passive: true });
+        updateNav();
+
+        var modal = document.getElementById('sample-img-modal'), simg = document.getElementById('sample-img'),
+            cap = document.getElementById('sample-img-cap'), siScroll = modal && modal.querySelector('.si-scroll'),
+            closeBtn = document.getElementById('sample-img-close'), backdrop = document.getElementById('sample-img-backdrop'), lastFocus = null;
+        function openLB(src, caption) {
+          if (!modal) return;
+          simg.src = src; simg.alt = caption; cap.textContent = caption;
+          modal.classList.remove('hidden'); modal.classList.add('flex');
+          document.body.style.overflow = 'hidden';
+          if (siScroll) siScroll.scrollTop = 0;
+          lastFocus = document.activeElement;
+          if (closeBtn) closeBtn.focus();
+        }
+        function closeLB() {
+          if (!modal) return;
+          modal.classList.add('hidden'); modal.classList.remove('flex');
+          document.body.style.overflow = ''; simg.src = '';
+          if (lastFocus && lastFocus.focus) lastFocus.focus();
+        }
+        track.addEventListener('click', function (e) {
+          var btn = e.target.closest ? e.target.closest('.ws-open') : null;
+          if (btn) openLB(btn.getAttribute('data-img'), btn.getAttribute('data-cap'));
+        });
+        if (closeBtn) closeBtn.addEventListener('click', closeLB);
+        if (backdrop) backdrop.addEventListener('click', closeLB);
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) closeLB(); });
+      })();
 
       // Starfield background (inspired by a reference portfolio): twinkling, drifting stars + a cursor constellation, plus a glow that follows the mouse
       (function () {
