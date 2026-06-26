@@ -347,6 +347,10 @@
       .t-track .tcard { margin-right:0; }
       .t-track .t-dup { display:none; }
       .t-wrap { overflow:visible; -webkit-mask-image:none; mask-image:none; }
+      .smq-track { animation:none !important; flex-wrap:wrap; justify-content:center; gap:1.25rem; width:auto; }
+      .smq-track .sg-card { margin-right:0; }
+      .smq-track .sg-dup { display:none; }
+      .smq-wrap { overflow:visible; -webkit-mask-image:none; mask-image:none; }
       .hud .ring1, .hud .ring3, .hud .hud-ticks, .hud .radar, .hud .robot, .hud .robot .eye, .hud .particle { animation:none !important; }
       .hud .scan { display:none; }
       .pbadge.pop { animation:none !important; }
@@ -461,6 +465,12 @@
     html[data-theme="light"] .ws-nav:hover { border-color:#8A6500; background:rgba(253,255,0,.12); }
     /* full-page sample lightbox: tall screenshots scroll vertically inside the frame */
     #sample-img-modal .si-scroll { max-height:85vh; overflow-y:auto; }
+    /* social-graphics: infinite auto-scrolling carousel (cert-card style, pauses on hover/focus) */
+    .smq-wrap { overflow:hidden; -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent); mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent); }
+    .smq-track { display:flex; width:max-content; animation: smq-scroll 60s linear infinite; }
+    .smq-track .sg-card { flex:0 0 auto; width:15rem; margin-right:1.25rem; }
+    .smq-wrap:hover .smq-track, .smq-wrap:focus-within .smq-track { animation-play-state:paused; }
+    @keyframes smq-scroll { from { transform:translateX(0); } to { transform:translateX(-50%); } }
   </style>
   <noscript><style>.reveal{opacity:1 !important;transform:none !important;filter:none !important}</style></noscript>
 </head>
@@ -1065,6 +1075,20 @@
       </div>
     </section>
 
+    <!-- ============ SOCIAL MEDIA GRAPHICS (asbuilder2 duplicate only) ============ -->
+    <section id="socialgraphics" aria-labelledby="socialgraphics-h" class="dupe-only overflow-hidden border-t border-white/[.06] py-20 md:py-28">
+      <div class="shell">
+        <p class="reveal kicker">Social Media</p>
+        <h2 id="socialgraphics-h" class="reveal mt-3 font-display text-4xl font-extrabold tracking-[-0.02em] sm:text-5xl" style="--d:.05s">Graphics &amp; <span class="text-volt">Carousels</span></h2>
+        <p class="reveal mt-4 max-w-2xl text-white/65" style="--d:.1s">Social media designs I've created, from scripture and holiday posts to brand promos and menus. Hover to pause, tap any design to view it full size.</p>
+      </div>
+      <div class="reveal mt-10" style="--d:.14s">
+        <div class="smq-wrap">
+          <div id="sg-track" class="smq-track" role="list" aria-label="Social media graphics carousel"></div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ CERTIFICATIONS ============ -->
     <section id="certifications" aria-labelledby="certifications-h" class="border-t border-white/[.06] py-20 md:py-28">
       <div class="shell">
@@ -1599,6 +1623,36 @@
           var btn = e.target.closest ? e.target.closest('.ws-open') : null;
           if (btn) openLB(btn.getAttribute('data-img'), btn.getAttribute('data-cap'));
         });
+
+        // Social-media graphics: infinite marquee (5 + 5 duplicate), reuses the same lightbox
+        var sgTrack = document.getElementById('sg-track');
+        if (sgTrack) {
+          var SOCIAL = [
+            ['assets/social/social-01.jpg', 'Scripture Post (Jeremiah 29:11)'],
+            ['assets/social/social-02.jpg', 'Independence Day Greeting'],
+            ['assets/social/social-03.jpg', 'Scripture Post (Isaiah 60:22)'],
+            ['assets/social/social-04.jpg', 'Cafe Promo (Good Sips)'],
+            ['assets/social/social-05.jpg', 'Restaurant Menu (Yakiniku)']
+          ];
+          function sgCard(s, dup) {
+            return '<figure class="sg-card panel panel-hover overflow-hidden' + (dup ? ' sg-dup' : '') + '"' + (dup ? ' aria-hidden="true"' : '') + '>'
+              + '<button type="button" class="ws-open group relative block aspect-square w-full overflow-hidden bg-[#f6f6f8]"' + (dup ? ' tabindex="-1"' : '') + ' data-img="' + s[0] + '" data-cap="' + s[1] + '" aria-label="View graphic: ' + s[1] + '">'
+              + '<img src="' + s[0] + '" alt="' + s[1] + '" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" onerror="this.style.opacity=0" />'
+              + '<span class="pointer-events-none absolute bottom-2.5 right-2.5 grid h-8 w-8 place-items-center rounded-full bg-volt text-ink shadow-[0_8px_22px_-6px_rgba(253,255,0,.7)] transition-colors group-hover:bg-gold"><i class="ph-bold ph-arrows-out text-sm"></i></span>'
+              + '</button>'
+              + '<figcaption class="px-3.5 py-3 text-center font-display text-xs font-bold text-white">' + s[1] + '</figcaption>'
+              + '</figure>';
+          }
+          var sgHtml = '';
+          for (var a = 0; a < SOCIAL.length; a++) sgHtml += sgCard(SOCIAL[a], false);
+          for (var d = 0; d < SOCIAL.length; d++) sgHtml += sgCard(SOCIAL[d], true);
+          sgTrack.innerHTML = sgHtml;
+          sgTrack.addEventListener('click', function (e) {
+            var btn = e.target.closest ? e.target.closest('.ws-open') : null;
+            if (btn) openLB(btn.getAttribute('data-img'), btn.getAttribute('data-cap'));
+          });
+        }
+
         if (closeBtn) closeBtn.addEventListener('click', closeLB);
         if (backdrop) backdrop.addEventListener('click', closeLB);
         document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) closeLB(); });
