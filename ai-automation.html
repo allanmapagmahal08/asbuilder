@@ -471,6 +471,21 @@
     .smq-track .sg-card { flex:0 0 auto; width:15rem; margin-right:1.25rem; }
     .smq-wrap:hover .smq-track, .smq-wrap:focus-within .smq-track { animation-play-state:paused; }
     @keyframes smq-scroll { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+
+    /* reels: smartphone mockups with embedded short-form video */
+    .reel-grid { display:grid; gap:2.25rem; grid-template-columns:1fr; }
+    @media (min-width:480px){ .reel-grid { grid-template-columns:repeat(2,1fr); } }
+    @media (min-width:900px){ .reel-grid { grid-template-columns:repeat(3,1fr); gap:1.75rem; } }
+    .phone { position:relative; width:100%; max-width:15rem; margin-inline:auto; border-radius:2.4rem; padding:.5rem;
+      background:linear-gradient(165deg,#242424,#0a0a0a); border:1px solid rgba(255,255,255,.12);
+      box-shadow:0 38px 72px -34px rgba(0,0,0,.92), inset 0 1px 0 rgba(255,255,255,.1), 0 0 0 1px rgba(253,255,0,.05); }
+    .phone-screen { position:relative; aspect-ratio:9/16; border-radius:1.95rem; overflow:hidden; background:#000; }
+    .phone-screen iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+    .phone-notch { position:absolute; top:0; left:50%; transform:translateX(-50%); width:36%; height:1rem; background:#0a0a0a; border-radius:0 0 .85rem .85rem; z-index:4; }
+    .phone-notch::after { content:''; position:absolute; top:.33rem; left:50%; transform:translateX(-50%); width:2.2rem; height:.26rem; border-radius:9999px; background:rgba(255,255,255,.16); }
+    .reel-label { margin-top:1rem; text-align:center; font-family:'Poppins',sans-serif; font-weight:700; font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; color:#F4F4F0; }
+    html[data-theme="light"] .phone { background:linear-gradient(165deg,#2c2c2c,#111); }
+    html[data-theme="light"] .reel-label { color:#14130F; }
   </style>
   <noscript><style>.reveal{opacity:1 !important;transform:none !important;filter:none !important}</style></noscript>
 </head>
@@ -1089,6 +1104,35 @@
       </div>
     </section>
 
+    <!-- ============ REELS / SHORT-FORM (asbuilder2 duplicate only) ============ -->
+    <section id="reels" aria-labelledby="reels-h" class="dupe-only border-t border-white/[.06] py-20 md:py-28">
+      <div class="shell">
+        <p class="reveal kicker">Reels</p>
+        <h2 id="reels-h" class="reveal mt-3 font-display text-4xl font-extrabold tracking-[-0.02em] sm:text-5xl" style="--d:.05s">Short-Form <span class="text-volt">Content</span></h2>
+        <p class="reveal mt-4 max-w-2xl text-white/65" style="--d:.1s">Short-form videos and reels I've edited. Tap a phone to play.</p>
+        <div class="reveal reel-grid mt-12" style="--d:.14s">
+          <div>
+            <div class="phone"><div class="phone-screen"><span class="phone-notch"></span>
+              <iframe class="reel-frame" data-src="https://www.tiktok.com/player/v1/7498659425469631762?description=0&amp;music_info=0&amp;closed_caption=0&amp;rel=0&amp;controls=1&amp;loop=1" title="Short-form reel 1" loading="lazy" allow="encrypted-media; fullscreen; autoplay" allowfullscreen></iframe>
+            </div></div>
+            <p class="reel-label">Reel 01</p>
+          </div>
+          <div>
+            <div class="phone"><div class="phone-screen"><span class="phone-notch"></span>
+              <iframe class="reel-frame" data-src="https://www.tiktok.com/player/v1/7250022807197797637?description=0&amp;music_info=0&amp;closed_caption=0&amp;rel=0&amp;controls=1&amp;loop=1" title="Short-form reel 2" loading="lazy" allow="encrypted-media; fullscreen; autoplay" allowfullscreen></iframe>
+            </div></div>
+            <p class="reel-label">Reel 02</p>
+          </div>
+          <div>
+            <div class="phone"><div class="phone-screen"><span class="phone-notch"></span>
+              <iframe class="reel-frame" data-src="https://www.tiktok.com/player/v1/7628535844743220500?description=0&amp;music_info=0&amp;closed_caption=0&amp;rel=0&amp;controls=1&amp;loop=1" title="Short-form reel 3" loading="lazy" allow="encrypted-media; fullscreen; autoplay" allowfullscreen></iframe>
+            </div></div>
+            <p class="reel-label">Reel 03</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ CERTIFICATIONS ============ -->
     <section id="certifications" aria-labelledby="certifications-h" class="border-t border-white/[.06] py-20 md:py-28">
       <div class="shell">
@@ -1651,6 +1695,12 @@
             var btn = e.target.closest ? e.target.closest('.ws-open') : null;
             if (btn) openLB(btn.getAttribute('data-img'), btn.getAttribute('data-cap'));
           });
+        }
+
+        // Reels: load the TikTok players ONLY on the duplicate (never touch TikTok on the main site)
+        if (document.documentElement.classList.contains('show-dupe')) {
+          var frames = document.querySelectorAll('.reel-frame[data-src]');
+          for (var r = 0; r < frames.length; r++) { frames[r].src = frames[r].getAttribute('data-src'); }
         }
 
         if (closeBtn) closeBtn.addEventListener('click', closeLB);
