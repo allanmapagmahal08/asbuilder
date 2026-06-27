@@ -449,6 +449,8 @@
     /* ===== duplicate-only sections (rendered, but shown ONLY on asbuilder2 / localhost) ===== */
     .dupe-only { display:none; }
     html.show-dupe .dupe-only { display:block; }
+    /* ===== hidden ONLY on the duplicate (asbuilder2 / localhost); visible on the main site ===== */
+    html.show-dupe .hide-on-dupe { display:none !important; }
 
     /* website-samples carousel (cert-card styling, horizontal scroll) */
     #ws-track { scrollbar-width:none; -ms-overflow-style:none; scroll-behavior:smooth; }
@@ -1372,7 +1374,7 @@
     </section>
 
     <!-- ============ ROI CALCULATOR ============ -->
-    <section id="roi" aria-labelledby="roi-h" class="relative overflow-hidden border-t border-white/[.06] py-20 md:py-28">
+    <section id="roi" aria-labelledby="roi-h" class="hide-on-dupe relative overflow-hidden border-t border-white/[.06] py-20 md:py-28">
       <div class="roi-stars" aria-hidden="true"></div>
       <div class="pointer-events-none absolute inset-0" style="background: radial-gradient(46rem 26rem at 50% 0%, rgba(253,255,0,0.08), transparent 60%);"></div>
       <div class="shell relative">
